@@ -40,6 +40,9 @@ public class BattleController : MonoBehaviour
     public Sprite _3x;
     [Header("射线检测")]
     public LayerMask charLayerMask;
+    [Header("装置设置(弩炮)")]
+    public List<GameObject> machines = new List<GameObject>();
+    private int machine_index = 0;
     private void Start() {
         Instance = this;
         pauseFrame.SetActive(false);
@@ -113,5 +116,11 @@ public class BattleController : MonoBehaviour
     }
     public void QuitBattle(){
         SceneManager.LoadScene(parent_scene);
+    }
+    public void ActiveMachine(){
+        machines[machine_index].SetActive(true);
+        if(machine_index < machines.Count-1){
+            machine_index++;
+        }
     }
 }

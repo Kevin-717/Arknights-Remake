@@ -35,6 +35,7 @@ public class Enemy : MonoBehaviour{
     public float def = 50;
     public float adef = 50;
     public bool haveStart = false;
+    public bool haveNormalAttack = true;
     public BattleController.damageType dt;
     public enum EnemyType
     {
@@ -67,6 +68,11 @@ public class Enemy : MonoBehaviour{
             if(move_line[move_index].GetComponent<PointInfo>().isWait == PointType.wait){
                 waitTime = move_line[move_index].GetComponent<PointInfo>().waitTime;
                 state = Idle_anim;
+                return;
+            }else if(move_line[move_index].GetComponent<PointInfo>().isWait == PointType.hole){
+                move_index++;
+                transform.position = move_line[move_index].transform.position;
+                move_index++;
                 return;
             }
             move_index++;
@@ -188,6 +194,7 @@ public class Enemy : MonoBehaviour{
         }
     }
     private void OnTriggerStay(Collider other) {
+        if(!haveNormalAttack) return;
         if(enemyType == EnemyType.Fly){
             return;
         }
@@ -199,6 +206,14 @@ public class Enemy : MonoBehaviour{
                     attackObject = other.gameObject;
                 }
             }
+        }
+    }
+    private void OnTriggerExit(Collider other) {
+        if(!haveNormalAttack) return;
+        if (enemyType == EnemyType.Fly) return;
+        if(state != Die_anim && other.gameObject == attackObject){
+            state = Move_anim;
+            attackObject = null;
         }
     }
 }

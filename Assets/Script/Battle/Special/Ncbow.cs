@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Spine.Unity;
+using Unity.VisualScripting;
 using UnityEngine;
 public class NcBow : MonoBehaviour 
 {
@@ -45,11 +46,11 @@ public class NcBow : MonoBehaviour
         }
     }
     public void Damage(){
-        if(attackObject != null){
+        if(attackObject != null && attackObject.IsDestroyed() == false){
             attackObject.GetComponent<Char>().TakeDamage(damage,dt);
-            enemyController.state = es;
-            enemyController.useSpecial = false;
-            attackObject = null;
         }
+        enemyController.state = es;
+        enemyController.useSpecial = false;
+        attackObject = null;
     }
 }

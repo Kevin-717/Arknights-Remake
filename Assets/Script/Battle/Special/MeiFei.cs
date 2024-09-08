@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Spine.Unity;
+using Unity.VisualScripting;
 using UnityEngine;
 public class MeiFei : MonoBehaviour 
 {
@@ -53,6 +54,7 @@ public class MeiFei : MonoBehaviour
     }
     public void Damage(){
         foreach(GameObject enemy in attackObjects){
+            if(enemy.IsDestroyed()) return;
             enemy.GetComponentInParent<Enemy>().TakeDamage(damage,BattleController.damageType.Revitalize);
         }
         attackObjects.Clear();

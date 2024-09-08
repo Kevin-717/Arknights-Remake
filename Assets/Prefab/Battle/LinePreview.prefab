@@ -156,6 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   move_line: []
+  move_index: 0
+  linePreview: {fileID: 3998092143638151130}
   speed: 5
 --- !u!114 &-3159028155158292615
 MonoBehaviour:
