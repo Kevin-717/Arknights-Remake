@@ -36,11 +36,17 @@ public class Faust : MonoBehaviour
                 && character.GetComponent<Char>().state != character.GetComponent<Char>().Die_anim
                 && character.GetComponent<Char>().state != "Default"
                 && character.GetComponent<Char>().state != character.GetComponent<Char>().Start_anim){
+                    attackObject = character;
                     countdown = interval;
                     es = enemyController.state;
+                    if(count >= 3){
+                        skillType = 1;
+                        atkAnim = skill1;
+                        enemyController.state = atkAnim;
+                        return;
+                    }
                     enemyController.state = atkAnim;
                     enemyController.useSpecial = true;
-                    attackObject = character;
                 }
             }    
             if(attackObject != null){
@@ -67,24 +73,19 @@ public class Faust : MonoBehaviour
     public void Damage(){
         switch(skillType){
             case 0:
-                if(attackObject != null && attackObject.IsDestroyed() == false){
+                if(attackObject != null ){
                     attackObject.GetComponent<Char>().TakeDamage(damage,dt);
                     count++;
-                    if(count == 3){
-                        count = 0;
-                        skillType = 1;
-                        atkAnim = skill1;
-                    }
                 }
                 enemyController.state = es;
                 enemyController.useSpecial = false;
                 attackObject = null;
                 atkAnim = Attack_anim;
-                skillType = 0;
                 break;
             case 1:
-                if(attackObject != null && attackObject.IsDestroyed() == false){
+                if(attackObject != null ){
                     attackObject.GetComponent<Char>().TakeDamage(damage*2,dt);
+                    count = 0;
                 }
                 enemyController.state = es;
                 enemyController.useSpecial = false;

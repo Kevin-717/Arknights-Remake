@@ -46,7 +46,7 @@ public class NcBow : MonoBehaviour
         }
     }
     public void Damage(){
-        if(attackObject != null && attackObject.IsDestroyed() == false){
+        if(attackObject != null ){
             attackObject.GetComponent<Char>().TakeDamage(damage,dt);
         }
         enemyController.state = es;

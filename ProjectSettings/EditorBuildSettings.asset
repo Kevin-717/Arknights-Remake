@@ -68,5 +68,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Battle5-10.unity
     guid: 8ea289bc2b326874ca17e0c27a7a8349
+  - enabled: 1
+    path: Assets/Scenes/Battle-Camp-03.unity
+    guid: ebe88c322631ed7469191e9f1419b1ff
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

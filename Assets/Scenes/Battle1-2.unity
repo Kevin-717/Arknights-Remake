@@ -6684,7 +6684,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5304684829999891123, guid: aba2599d9ceaf4549b68e8f4bee5977b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.508
+      value: -4.513
       objectReference: {fileID: 0}
     - target: {fileID: 5304684829999891123, guid: aba2599d9ceaf4549b68e8f4bee5977b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -12861,7 +12861,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5304684829999891123, guid: aba2599d9ceaf4549b68e8f4bee5977b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.507
+      value: -4.512
       objectReference: {fileID: 0}
     - target: {fileID: 5304684829999891123, guid: aba2599d9ceaf4549b68e8f4bee5977b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -19683,6 +19683,7 @@ MonoBehaviour:
   charLayerMask:
     serializedVersion: 2
     m_Bits: 256
+  machines: []
 --- !u!4 &1922979821
 Transform:
   m_ObjectHideFlags: 0
