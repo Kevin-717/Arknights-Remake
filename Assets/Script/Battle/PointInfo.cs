@@ -6,7 +6,8 @@ public enum PointType
 {
     normal,
     wait,
-    hole,
+    disappear,
+    appear
 }
 public class PointInfo : MonoBehaviour
 {

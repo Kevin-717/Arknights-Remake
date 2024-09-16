@@ -81,6 +81,7 @@ public class Char : MonoBehaviour
             skeletonAnimation.state.Complete += delegate{
                 Destroy(gameObject);
             };
+            Destroy(gameObject,2f);
         }
         hpScale = hp/totalHp;
         animScale = hp/totalHp;
@@ -156,6 +157,7 @@ public class Char : MonoBehaviour
     private void OnStart(){
         if(first == "getPos"){
             if(!can_put){
+                
                 Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
                 Vector3 m_MousePos = new Vector3(Input.mousePosition.x,Input.mousePosition.y, pos.z);
                 Vector3 wp = Camera.main.ScreenToWorldPoint(m_MousePos);

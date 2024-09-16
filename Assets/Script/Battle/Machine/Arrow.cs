@@ -10,6 +10,7 @@ public class Arrow : MonoBehaviour
     public float atk = 100;
     private void Start() {
         transform.eulerAngles = direction;
+        Destroy(gameObject,9f);
     }
     private void Update() {
         transform.Translate(movement*speed*Time.deltaTime);

@@ -12,6 +12,7 @@ public class ZombieEnemy : MonoBehaviour
         lt = Time.time;
     }
     private void Update() {
+        if(enemyController.inhole) return;
         if(Time.time - lt > 1){
             lt = Time.time;
             enemyController.TakeDamage(hpSpeed*hpVal,BattleController.damageType.Revitalize);

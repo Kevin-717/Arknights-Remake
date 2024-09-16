@@ -12,8 +12,8 @@ public class Enemy : MonoBehaviour{
     private AIPath aIPath;
     public float speed = 3;
     private GameObject attackObject;
-    [HideInInspector]
-    public List<GameObject> move_line;
+    //[HideInInspector]
+    public List<EnemyPath> move_line;
     public int move_index = 0;
     private float waitTime = 0;
     public float hp = 50f;
@@ -44,6 +44,10 @@ public class Enemy : MonoBehaviour{
     }
     public EnemyType enemyType;
     private Rigidbody rb;
+    private GameObject point;
+    [HideInInspector]
+    public bool inhole = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -51,7 +55,9 @@ public class Enemy : MonoBehaviour{
         aIDestinationSetter = GetComponent<AIDestinationSetter>();
         aIPath = GetComponent<AIPath>();
         aIPath.maxSpeed = 0;
-        aIDestinationSetter.target = move_line[move_index].transform;
+        point = Instantiate(Resources.Load("Prefab/Battle/Point") as GameObject,transform.position,Quaternion.identity);
+        aIDestinationSetter.target = point.transform;
+        aIDestinationSetter.target.position = move_line[move_index].path;
         totalHp = hp;
         if(!haveStart){
             state = Move_anim;
@@ -59,45 +65,55 @@ public class Enemy : MonoBehaviour{
         rb = GetComponent<Rigidbody>();
     }
     private void Move(){
-        if(move_index == move_line.Count){
-            BattleController.Instance.life--;
-            Destroy(gameObject);
-            return;
-        }
-        if(Vector3.Distance(move_line[move_index].transform.position,transform.position) <= 0.7f){
-            if(move_line[move_index].GetComponent<PointInfo>().isWait == PointType.wait){
-                waitTime = move_line[move_index].GetComponent<PointInfo>().waitTime;
-                state = Idle_anim;
+        if(Vector3.Distance(move_line[move_index].path,transform.position) <= 0.7f){
+            move_index++;
+            if(move_index == move_line.Count){
+                BattleController.Instance.life--;
+                Destroy(gameObject);
                 return;
-            }else if(move_line[move_index].GetComponent<PointInfo>().isWait == PointType.hole){
-                move_index++;
-                transform.position = move_line[move_index].transform.position;
+            }
+            if(move_line[move_index].pointType == PointType.wait){
+                waitTime = move_line[move_index].waitTime;
+                state = Idle_anim;
+                move_index--;
+                return;
+            }else if(move_line[move_index].pointType == PointType.disappear){
+                GetComponent<MeshRenderer>().enabled = false;
+                HpBar.transform.parent.gameObject.SetActive(false);
+                inhole = true;
+                return;
+            }else if(move_line[move_index].pointType == PointType.appear){
+                transform.position = move_line[move_index].path;
+                HpBar.transform.parent.gameObject.SetActive(true);
+                inhole = false;
+                GetComponent<MeshRenderer>().enabled = true;
                 move_index++;
                 return;
             }
-            move_index++;
         }else{
             if(enemyType == EnemyType.Fly){
                 float x = transform.position.x;
                 float y = transform.position.y;
                 float z = transform.position.z;
-                float dx = move_line[move_index].transform.position.x;
-                float dy = move_line[move_index].transform.position.y;
-                float dz = move_line[move_index].transform.position.z;
+                float dx = move_line[move_index].path.x;
+                float dy = move_line[move_index].path.y;
+                float dz = move_line[move_index].path.z;
                 float mx = (Mathf.Abs(x-dx)<=0.1f)?0:(x>dx?-1:1);
                 float my = (Mathf.Abs(y-dy)<=0.1f)?0:(y>dy?-1:1);
-                float mz = (Mathf.Abs(z-dz)<=0.1f)?0:(z>dz?-1:1);
+                //float mz = (Mathf.Abs(z-dz)<=0.1f)?0:(z>dz?-1:1);
                 if(mx < 0){
                     transform.eulerAngles = new Vector3(30,180,0);
+                    mx=-mx;
                 }else{
                     transform.eulerAngles = new Vector3(-30,0,0);
                 }
-                Vector3 movement = new Vector3(mx,my,mz);
+                Vector3 movement = new Vector3(mx,my,0);
                 rb.transform.Translate(movement*speed*Time.deltaTime);
+                rb.transform.position = new Vector3(rb.transform.position.x,rb.transform.position.y,0);
             }else{
-                aIDestinationSetter.target = move_line[move_index].transform;
+                aIDestinationSetter.target.position = move_line[move_index].path;
                 float x = transform.position.x;
-                float dx = move_line[move_index].transform.position.x;
+                float dx = move_line[move_index].path.x;
                 float mx = (Mathf.Abs(x-dx)<=0.1f)?0:(x>dx?-1:1);
                 if(mx < 0){
                     transform.eulerAngles = new Vector3(30,180,0);
@@ -122,6 +138,8 @@ public class Enemy : MonoBehaviour{
         UpdateHpBar();
         if(spine_anim.AnimationName != state){
             if(state != Die_anim){
+                Debug.Log(state);
+                Debug.Log(Move_anim);
                 spine_anim.state.SetAnimation(0,state,true);
             }else{
                 spine_anim.state.SetAnimation(0,state,false);
@@ -173,10 +191,8 @@ public class Enemy : MonoBehaviour{
         animScale = hp/totalHp;
     }
     private void OnDestroy() {
-        if(EnemyController.Instance != null){
-            EnemyController.Instance.enemyNum--;
-            BattleController.Instance.enemyNum++;
-        }
+        BattleController.Instance.enemyNum++;
+        Destroy(point);
     }
     public void Damage(){
         try{
@@ -194,7 +210,7 @@ public class Enemy : MonoBehaviour{
         }
     }
     private void OnTriggerStay(Collider other) {
-        if(!haveNormalAttack) return;
+        if((!haveNormalAttack) || inhole) return;
         if(enemyType == EnemyType.Fly){
             return;
         }

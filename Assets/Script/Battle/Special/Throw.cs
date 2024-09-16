@@ -22,6 +22,7 @@ public class Throw : MonoBehaviour
         countdown = interval;
     }
     private void Update(){
+        if(enemyController.inhole) return;
         if(countdown <= 0 && attackObject == null && enemyController.state != enemyController.Die_anim){
             foreach (GameObject character in GameObject.FindGameObjectsWithTag("char")){
                 if(Vector3.Distance(character.transform.position,transform.position)<=attackRange
@@ -47,7 +48,7 @@ public class Throw : MonoBehaviour
         }
     }
     public void Damage(){
-        if(attackObject != null){
+        if(attackObject != null && attackObject.GetComponent<Char>().hp > 0){
             // attackObject.GetComponent<Char>().TakeDamage(damage,dt);
             GameObject obj = Instantiate(paodan);
             obj.transform.position = transform.position+offset;
@@ -58,6 +59,11 @@ public class Throw : MonoBehaviour
             enemyController.state = es;
             enemyController.useSpecial = false;
             attackObject = null;
+        }else{
+            enemyController.state = es;
+            enemyController.useSpecial = false;
+            attackObject = null;
+            return;
         }
     }
 }

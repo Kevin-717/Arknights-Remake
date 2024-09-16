@@ -1,4 +1,3 @@
-using LitJson;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
@@ -53,7 +52,6 @@ public class StoryLoader : MonoBehaviour
     }
     [Header("剧情文件路径")]
     public string fn;
-    private JsonData storyVars;
     private string storyText;
     public List<StoryItem> storyData;
     private int play_index = 0;
@@ -82,7 +80,6 @@ public class StoryLoader : MonoBehaviour
         if(!debug){
             fn = StoryJumper.Instance.storyPath;
         }
-        storyVars = JsonMapper.ToObject(ReadData(Application.streamingAssetsPath + "\\story_variables.json"));
         storyText = ReadData(Application.streamingAssetsPath+"\\"+fn);
         storyData = loadStory(storyText);
         Debug.Log("load finish");

@@ -21,6 +21,7 @@ public class MeiFei : MonoBehaviour
         countdown = interval;
     }
     private void Update(){
+        if(enemyController.inhole) return;
         if(countdown <= 0 && enemyController.state != enemyController.Die_anim && GameObject.FindGameObjectsWithTag("Enemy").Length > 0){
             Debug.Log(GameObject.FindGameObjectsWithTag("Enemy").Length );
             countdown = interval;

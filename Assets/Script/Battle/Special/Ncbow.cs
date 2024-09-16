@@ -21,6 +21,7 @@ public class NcBow : MonoBehaviour
         countdown = interval;
     }
     private void Update(){
+        if(enemyController.inhole) return;
         if(countdown <= 0 && attackObject == null && enemyController.state != enemyController.Die_anim){
             foreach (GameObject character in GameObject.FindGameObjectsWithTag("char")){
                 if(Vector3.Distance(character.transform.position,transform.position)<=attackRange
@@ -39,17 +40,22 @@ public class NcBow : MonoBehaviour
         }
         if(attackObject != null){
             if(attackObject.GetComponent<Char>().hp <= 0){
-                enemyController.state = es;
+                enemyController.state = enemyController.Move_anim;
                 enemyController.useSpecial = false;
                 attackObject = null;
             }
         }
     }
     public void Damage(){
-        if(attackObject != null ){
+        if(attackObject != null && attackObject.GetComponent<Char>().hp > 0){
             attackObject.GetComponent<Char>().TakeDamage(damage,dt);
+        }else{
+            enemyController.state = enemyController.Move_anim;
+            enemyController.useSpecial = false;
+            attackObject = null;
+            return;
         }
-        enemyController.state = es;
+        enemyController.state = enemyController.Move_anim;
         enemyController.useSpecial = false;
         attackObject = null;
     }

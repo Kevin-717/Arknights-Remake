@@ -969,7 +969,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e21f38a05121574fbdd5ee9f19e2fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level_name: "\u527F\u706D  \u9F99\u95E8\u5E02\u533A"
+  level_name: "\u9F99\u95E8\u5E02\u533A"
   level_description: "\u527F\u706D\u653B\u5165\u9F99\u95E8\u5E02\u533A\u7684\u6574\u5408\u8FD0\u52A8\u6B66\u88C5\u5206\u5B50\uFF0C\u593A\u56DE\u5730\u533A\u4E3B\u52A8\u6743\u3002
     <\u7279\u6B8A\u6761\u4EF6>\u90E8\u7F72\u8D39\u7528\u4E0D\u4F1A\u81EA\u7136\u56DE\u590D"
   level_num: "\u4F5C\u6218"
