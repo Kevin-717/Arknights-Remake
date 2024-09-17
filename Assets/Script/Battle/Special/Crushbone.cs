@@ -42,7 +42,7 @@ public class Crushbone : MonoBehaviour
         }
         if(attackObject != null){
             if(attackObject.GetComponent<Char>().hp <= 0){
-                enemyController.state = es;
+                enemyController.state = enemyController.Move_anim;
                 enemyController.useSpecial = false;
                 attackObject = null;
             }
@@ -65,7 +65,7 @@ public class Crushbone : MonoBehaviour
             obj.GetComponent<PaoDan>().def_down = 0.5f;
             obj.GetComponent<PaoDan>().t = 5f;
             obj.GetComponent<Parabola_A_to_B>().target_trans = attackObject.gameObject.transform;
-            enemyController.state = es;
+            enemyController.state = enemyController.Move_anim;
             enemyController.useSpecial = false;
             attackObject = null;
         }

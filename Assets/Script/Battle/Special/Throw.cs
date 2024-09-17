@@ -41,7 +41,7 @@ public class Throw : MonoBehaviour
         }
         if(attackObject != null){
             if(attackObject.GetComponent<Char>().hp <= 0){
-                enemyController.state = es;
+                enemyController.state = enemyController.Move_anim;
                 enemyController.useSpecial = false;
                 attackObject = null;
             }
@@ -56,11 +56,11 @@ public class Throw : MonoBehaviour
             obj.GetComponent<PaoDan>().damageType = dt;
             obj.GetComponent<PaoDan>().target = attackObject.gameObject;
             obj.GetComponent<Parabola_A_to_B>().target_trans = attackObject.gameObject.transform;
-            enemyController.state = es;
+            enemyController.state = enemyController.Move_anim;
             enemyController.useSpecial = false;
             attackObject = null;
         }else{
-            enemyController.state = es;
+            enemyController.state = enemyController.Move_anim;
             enemyController.useSpecial = false;
             attackObject = null;
             return;

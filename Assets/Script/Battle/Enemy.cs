@@ -65,6 +65,11 @@ public class Enemy : MonoBehaviour{
         rb = GetComponent<Rigidbody>();
     }
     private void Move(){
+        if(move_index >= move_line.Count-1){
+            BattleController.Instance.life--;
+            Destroy(gameObject);
+            return;
+        }
         if(Vector3.Distance(move_line[move_index].path,transform.position) <= 0.7f){
             move_index++;
             if(move_index == move_line.Count){
