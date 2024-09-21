@@ -28,6 +28,7 @@ public class Enemy : MonoBehaviour{
     public string Idle_anim;
     public string Attack_anim;
     public string Die_anim;
+    public string HpAddAnim;
     [HideInInspector]
     public string state;
     [HideInInspector]
@@ -36,6 +37,8 @@ public class Enemy : MonoBehaviour{
     public float adef = 50;
     public bool haveStart = false;
     public bool haveNormalAttack = true;
+    public bool haveSecondLife = false;
+    private bool flag = false;
     public BattleController.damageType dt;
     public enum EnemyType
     {
@@ -65,14 +68,9 @@ public class Enemy : MonoBehaviour{
         rb = GetComponent<Rigidbody>();
     }
     private void Move(){
-        if(move_index >= move_line.Count-1){
-            BattleController.Instance.life--;
-            Destroy(gameObject);
-            return;
-        }
         if(Vector3.Distance(move_line[move_index].path,transform.position) <= 0.7f){
             move_index++;
-            if(move_index == move_line.Count){
+            if(move_index >= move_line.Count){
                 BattleController.Instance.life--;
                 Destroy(gameObject);
                 return;
@@ -169,6 +167,7 @@ public class Enemy : MonoBehaviour{
         }
     }
     public void TakeDamage(float damage,BattleController.damageType dt){
+        if(state == HpAddAnim) return;
         float value = 0;
         if(dt == BattleController.damageType.Physics){
             value = Mathf.Max(0.05f*damage,damage-def);
@@ -185,12 +184,23 @@ public class Enemy : MonoBehaviour{
         }
         hp -= value;
         if(hp <= 0){
-            hp = 0;
-            state = Die_anim;
-            aIPath.maxSpeed = 0;
-            spine_anim.state.Complete += delegate{
-                Destroy(gameObject);
-            };
+            if(!haveSecondLife || flag){
+                hp = 0;
+                state = Die_anim;
+                aIPath.maxSpeed = 0;
+                spine_anim.state.Complete += delegate{
+                    Destroy(gameObject);
+                };
+            }else{
+                flag = !flag;
+                hp = totalHp;
+                state = HpAddAnim;
+                spine_anim.state.Complete += delegate{
+                    if(state == HpAddAnim){
+                        state = Move_anim;
+                    }
+                };
+            }
         }
         hpScale = hp/totalHp;
         animScale = hp/totalHp;

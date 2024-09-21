@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc0b810993091946b0979923fe0b3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 682
+  hp: 1220
   HpAnim: {fileID: 4818378871598084007}
   HpBar: {fileID: 7358254540810156269}
   totalHp: 0
@@ -439,7 +439,7 @@ MonoBehaviour:
   Attack_anim: Attack
   Die_anim: Die
   state: 
-  damage: 153
+  damage: 345
   can_put: 0
   ct: 1
   getDFrame: {fileID: 3302530239779535053}
@@ -449,9 +449,12 @@ MonoBehaviour:
   dCircle: {fileID: 5405290982211384531}
   targetCollider: {fileID: 8609496434718975592}
   createBtn: {fileID: 0}
-  def: 61
+  def: 110
   adef: 0
   dt: 2
+  dd: 0
+  is_range: 0
+  enemyList: []
 --- !u!54 &4121685008941270739
 Rigidbody:
   m_ObjectHideFlags: 0

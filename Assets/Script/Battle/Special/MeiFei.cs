@@ -26,7 +26,7 @@ public class MeiFei : MonoBehaviour
             countdown = interval;
             int c = 0;
             foreach(GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy")){
-                if(enemy.gameObject.name == "Collider") continue;
+                if(enemy.GetComponent<Enemy>() == null) continue;
                 if(enemy.GetComponent<Enemy>().hp < enemy.GetComponent<Enemy>().totalHp){
                     attackObjects.Add(enemy);
                     c++;
@@ -36,12 +36,12 @@ public class MeiFei : MonoBehaviour
                 if( GameObject.FindGameObjectsWithTag("Enemy").Length < 3){
                     attackObjects.Clear();
                     foreach(GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy")){
-                        if(enemy.gameObject.name == "Collider") continue;
+                        if(enemy.GetComponent<Enemy>() == null) continue;
                         attackObjects.Add(enemy);
                     } 
                 };
                 foreach(GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy")){
-                    if(enemy.gameObject.name == "Collider") continue;
+                    if(enemy.GetComponent<Enemy>() == null) continue;
                     if(attackObjects.IndexOf(enemy) == -1){
                         attackObjects.Add(enemy);
                     }

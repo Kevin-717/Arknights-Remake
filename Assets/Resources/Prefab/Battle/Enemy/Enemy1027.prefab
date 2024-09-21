@@ -380,7 +380,7 @@ MonoBehaviour:
     unityHandler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 4071980515821885989}
           m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
           m_MethodName: Damage
           m_Mode: 1
@@ -452,6 +452,7 @@ MonoBehaviour:
   haveNormalAttack: 1
   dt: 0
   enemyType: 0
+  inhole: 0
 --- !u!114 &2680607884040984358
 MonoBehaviour:
   m_ObjectHideFlags: 0

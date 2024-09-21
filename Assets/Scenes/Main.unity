@@ -6618,6 +6618,16 @@ MonoBehaviour:
     charIcon: {fileID: 1928157637, guid: 01110d97ba634f8499bd7bb916758813, type: 3}
     charHalf: {fileID: 21300000, guid: 6774c58205d0a844b858dbf00112b0f4, type: 3}
     charName: "\u708E\u7194"
+  - id: 7
+    image: {fileID: 21300000, guid: f9c364a081d3b5a49908b22c044e65c9, type: 3}
+    type: {fileID: 709609997, guid: 2556bca82a6273c4bb5a95e4f8871758, type: 3}
+    charPrefab: {fileID: 3136114948656059760, guid: 7a50833d73b98f343b48a12bb55636dd, type: 3}
+    cost: 19
+    waitTime: 70
+    ct: 0
+    charIcon: {fileID: 709609997, guid: 2556bca82a6273c4bb5a95e4f8871758, type: 3}
+    charHalf: {fileID: 21300000, guid: 6ea03455da33dc94883637248210bad5, type: 3}
+    charName: "\u7FBD\u6BDB\u7B14"
 --- !u!114 &1708027576
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -324,15 +324,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc0b810993091946b0979923fe0b3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 699
+  hp: 1480
   HpAnim: {fileID: 4818378871598084007}
   HpBar: {fileID: 7358254540810156269}
+  totalHp: 0
   Start_anim: Start
   Idle_anim: Idle
   Attack_anim: Attack
   Die_anim: Die
   state: 
-  damage: 276
+  damage: 612
   can_put: 0
   ct: 1
   getDFrame: {fileID: 3302530239779535053}
@@ -342,9 +343,12 @@ MonoBehaviour:
   dCircle: {fileID: 5405290982211384531}
   targetCollider: {fileID: 8609496434718975592}
   createBtn: {fileID: 0}
-  def: 48
-  adef: 10
+  def: 121
+  adef: 20
   dt: 1
+  dd: 0
+  is_range: 0
+  enemyList: []
 --- !u!54 &4121685008941270739
 Rigidbody:
   m_ObjectHideFlags: 0

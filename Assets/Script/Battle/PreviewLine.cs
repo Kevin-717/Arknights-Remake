@@ -37,4 +37,5 @@ public class PreviewLine: MonoBehaviour
         if(!isMove) return;
         Move();
     }
+    
 }
