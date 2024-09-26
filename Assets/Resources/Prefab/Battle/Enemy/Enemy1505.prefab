@@ -455,6 +455,7 @@ MonoBehaviour:
   dt: 0
   enemyType: 0
   inhole: 0
+  addTime: 7.2
 --- !u!114 &-7350263102690505590
 MonoBehaviour:
   m_ObjectHideFlags: 0

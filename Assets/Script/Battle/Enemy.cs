@@ -50,6 +50,7 @@ public class Enemy : MonoBehaviour{
     private GameObject point;
     [HideInInspector]
     public bool inhole = false;
+    public float addTime = 5;
 
     // Start is called before the first frame update
     void Start()
@@ -141,14 +142,20 @@ public class Enemy : MonoBehaviour{
         UpdateHpBar();
         if(spine_anim.AnimationName != state){
             if(state != Die_anim){
-                Debug.Log(state);
-                Debug.Log(Move_anim);
                 spine_anim.state.SetAnimation(0,state,true);
             }else{
                 spine_anim.state.SetAnimation(0,state,false);
             }
         }
-        if(state == Move_anim){
+        if(state == HpAddAnim){
+            addTime -= Time.deltaTime;
+            if(addTime <= 0){
+                state = Move_anim;
+                flag = true;
+            }
+            return;
+        }
+        else if(state == Move_anim){
             if(enemyType == EnemyType.Ground){
                 aIPath.maxSpeed = speed;
             }
@@ -192,14 +199,9 @@ public class Enemy : MonoBehaviour{
                     Destroy(gameObject);
                 };
             }else{
-                flag = !flag;
                 hp = totalHp;
                 state = HpAddAnim;
-                spine_anim.state.Complete += delegate{
-                    if(state == HpAddAnim){
-                        state = Move_anim;
-                    }
-                };
+                return;
             }
         }
         hpScale = hp/totalHp;
@@ -225,7 +227,7 @@ public class Enemy : MonoBehaviour{
         }
     }
     private void OnTriggerStay(Collider other) {
-        if((!haveNormalAttack) || inhole) return;
+        if((!haveNormalAttack) || inhole || state == HpAddAnim) return;
         if(enemyType == EnemyType.Fly){
             return;
         }
@@ -240,7 +242,7 @@ public class Enemy : MonoBehaviour{
         }
     }
     private void OnTriggerExit(Collider other) {
-        if(!haveNormalAttack) return;
+        if(!haveNormalAttack || state == HpAddAnim) return;
         if (enemyType == EnemyType.Fly) return;
         if(state != Die_anim && other.gameObject == attackObject){
             state = Move_anim;
