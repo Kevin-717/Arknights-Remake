@@ -8,8 +8,9 @@ using Unity.VisualScripting;
 
 public class Enemy : MonoBehaviour{
     private SkeletonAnimation spine_anim;
-    private AIDestinationSetter aIDestinationSetter;
-    private AIPath aIPath;
+    // private AIDestinationSetter aIDestinationSetter;
+    // private AIPath aIPath;
+    private EnemyMove enemyMove;
     public float speed = 3;
     private GameObject attackObject;
     //[HideInInspector]
@@ -56,12 +57,16 @@ public class Enemy : MonoBehaviour{
     void Start()
     {
         spine_anim = GetComponent<SkeletonAnimation>();
-        aIDestinationSetter = GetComponent<AIDestinationSetter>();
-        aIPath = GetComponent<AIPath>();
-        aIPath.maxSpeed = 0;
-        point = Instantiate(Resources.Load("Prefab/Battle/Point") as GameObject,transform.position,Quaternion.identity);
-        aIDestinationSetter.target = point.transform;
-        aIDestinationSetter.target.position = move_line[move_index].path;
+        // aIDestinationSetter = GetComponent<AIDestinationSetter>();
+        // aIPath = GetComponent<AIPath>();
+        enemyMove = GetComponent<EnemyMove>();
+        // aIPath.maxSpeed = 0;
+        // point = Instantiate(Resources.Load("Prefab/Battle/Point") as GameObject,transform.position,Quaternion.identity);
+        // aIDestinationSetter.target = point.transform;
+        // aIDestinationSetter.target.position = move_line[move_index].path;
+        enemyMove.seeker = GetComponent<Seeker>();
+        Debug.Log(enemyMove.seeker);
+        enemyMove.UpdatePath(move_line[move_index].path);
         totalHp = hp;
         if(!haveStart){
             state = Move_anim;
@@ -69,7 +74,7 @@ public class Enemy : MonoBehaviour{
         rb = GetComponent<Rigidbody>();
     }
     private void Move(){
-        if(Vector3.Distance(move_line[move_index].path,transform.position) <= 0.7f){
+        if(Vector3.Distance(move_line[move_index].path,transform.position) <= 0.3f){
             move_index++;
             if(move_index >= move_line.Count){
                 BattleController.Instance.life--;
@@ -115,7 +120,8 @@ public class Enemy : MonoBehaviour{
                 rb.transform.Translate(movement*speed*Time.deltaTime);
                 rb.transform.position = new Vector3(rb.transform.position.x,rb.transform.position.y,0);
             }else{
-                aIDestinationSetter.target.position = move_line[move_index].path;
+                enemyMove.UpdatePath(move_line[move_index].path);
+                enemyMove.NextTarget();
                 float x = transform.position.x;
                 float dx = move_line[move_index].path.x;
                 float mx = (Mathf.Abs(x-dx)<=0.1f)?0:(x>dx?-1:1);
@@ -157,20 +163,20 @@ public class Enemy : MonoBehaviour{
         }
         else if(state == Move_anim){
             if(enemyType == EnemyType.Ground){
-                aIPath.maxSpeed = speed;
+                enemyMove.speed = speed;
             }
             Move();
         }else if(state == Idle_anim){
-            aIPath.maxSpeed = 0;
+            enemyMove.speed = 0;
             Delay();
         }else if(state == Attack_anim && !useSpecial){
-            aIPath.maxSpeed = 0;
-            if(attackObject == null || attackObject.GetComponentInParent<Char>().hp <= 0 || attackObject.IsDestroyed() ){
+            enemyMove.speed = 0;
+            if(attackObject == null || attackObject.GetComponentInParent<Char>().hp <= 0){
                 attackObject = null;
                 state = Move_anim;
             }
         }else{
-            aIPath.maxSpeed = 0;
+            enemyMove.speed = 0;
         }
     }
     public void TakeDamage(float damage,BattleController.damageType dt){
@@ -194,7 +200,7 @@ public class Enemy : MonoBehaviour{
             if(!haveSecondLife || flag){
                 hp = 0;
                 state = Die_anim;
-                aIPath.maxSpeed = 0;
+                enemyMove.speed = 0;
                 spine_anim.state.Complete += delegate{
                     Destroy(gameObject);
                 };

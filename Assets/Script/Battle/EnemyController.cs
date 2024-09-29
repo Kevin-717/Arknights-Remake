@@ -5,9 +5,8 @@ using System.IO;
 using Newtonsoft;
 using Newtonsoft.Json.Linq;
 using System.Linq;
-using Unity.VisualScripting;
-using System.Threading.Tasks;
-using System.Threading;
+using UnityEngine.UI;
+using DG.Tweening;
 [System.Serializable]
 public class EnemyPath{
     public Vector3 path;
@@ -16,6 +15,7 @@ public class EnemyPath{
 }
 [System.Serializable]
 public class EnemyGroupData{
+    public int type = 0;
     public GameObject enemyPrefab;
     public Vector3 startPos;
     public List<EnemyPath> enemyPath = new List<EnemyPath>();
@@ -23,6 +23,9 @@ public class EnemyGroupData{
     public float interval = 1;
     public float startTime;
     public bool created = false;
+    public string name;
+    public string description;
+    public Sprite icon;
 }
 public class EnemyController : MonoBehaviour 
 {
@@ -33,7 +36,11 @@ public class EnemyController : MonoBehaviour
     private JObject enemyData;
     public List<EnemyGroupData> enemyDatas = new List<EnemyGroupData>();
     private float globalTimer = 0;
-
+    public GameObject toastFrame;
+    public Image toastIcon;
+    public Text toastTitle;
+    public Text toastDescription;
+    public bool is_toasting = false;
     private void Start() {
         Instance = this;
         levelDataFile = Application.streamingAssetsPath+levelDataFile;
@@ -45,11 +52,12 @@ public class EnemyController : MonoBehaviour
         enemyData = JObject.Parse(data);
         Debug.Log("LoadFile -> "+enemyDataFile);
         Debug.Log("Waves -> " + levelData["waves"].ToList().Count);
-        InitEnemyData(levelData);
+        InitEnemyData(levelData,enemyData);
     }
-    private void InitEnemyData(JObject levelData){
+    private void InitEnemyData(JObject levelData,JObject enemyData){
         JArray waves = JArray.Parse(levelData["waves"].ToString());
         JArray routes = JArray.Parse(levelData["routes"].ToString());
+        JArray enemiesData = JArray.Parse(enemyData["enemies"].ToString());
         float publicDelayTime = 0;
         foreach(var wave in waves){
             Debug.Log("Load Wave - "+wave.ToString());
@@ -93,6 +101,8 @@ public class EnemyController : MonoBehaviour
                                         case 0:
                                             //Move
                                             p = new Vector3((float)point["position"]["col"],(float)point["position"]["row"],0);
+                                            Vector3 offset = new Vector3((float)point["reachOffset"]["x"],(float)point["reachOffset"]["y"],0);
+                                            p += offset;
                                             enemyPath.path = p;
                                             enemyPath.pointType = PointType.normal;
                                             break;
@@ -128,7 +138,37 @@ public class EnemyController : MonoBehaviour
                                     Debug.Log("wave last -> checkTime");
                                     publicDelayTime = publicDelayTime + (float)enemy["preDelay"]+(float)fragment["preDelay"];
                                 }
+                                enemyGroupData.type = 0;
                                 enemyDatas.Add(enemyGroupData);
+                                break;
+                            case 1:
+                                //Preview Cursor
+                                break;
+                            case 2:
+                                //STORY
+                                break;
+                            case 3:
+                                //???
+                                break;
+                            case 4:
+                                //PLAY_BGM
+                                break;
+                            case 5:
+                                //DISPLAY ENEMY INFO
+                                EnemyGroupData enemyInfoData = new EnemyGroupData();
+                                enemyInfoData.type = 5;
+                                string key = enemy["key"].ToString();
+                                foreach(var e in enemiesData){
+                                    if(e["Key"].ToString() == key){
+                                        string name = e["Value"][0]["enemyData"]["name"]["m_value"].ToString();
+                                        string description = e["Value"][0]["enemyData"]["description"]["m_value"].ToString();
+                                        enemyInfoData.name = name;
+                                        enemyInfoData.startTime = publicDelayTime + (float)enemy["preDelay"]+(float)fragment["preDelay"];
+                                        enemyInfoData.description = description.Replace("</>","</color>").Replace("<@eb.danger>","<color=red>").Replace("<@eb.key>","<color=\"#00F6FF\">");
+                                        enemyInfoData.icon = Resources.Load<Sprite>("enemies_icon/"+key);
+                                    }
+                                }
+                                enemyDatas.Add(enemyInfoData);
                                 break;
                         }
                     }catch{
@@ -151,11 +191,36 @@ public class EnemyController : MonoBehaviour
         globalTimer += Time.deltaTime;
         foreach(EnemyGroupData enemyGroupData in enemyDatas){
             if(globalTimer > enemyGroupData.startTime && (!enemyGroupData.created)){
-                GameObject g = Instantiate(Resources.Load("Prefab/Battle/CreateTemp") as GameObject);
-                g.GetComponent<CreateEnemyTemp>().enemy = enemyGroupData;
+                switch(enemyGroupData.type){
+                    case 0:
+                        GameObject g = Instantiate(Resources.Load("Prefab/Battle/CreateTemp") as GameObject);
+                        g.GetComponent<CreateEnemyTemp>().enemy = enemyGroupData;
+                        break;
+                    case 5:
+                        //DISPLAY ENEMY INFO
+                        if(is_toasting){
+                            enemyGroupData.startTime += 3.6f;
+                            return;
+                        }
+                        is_toasting = true;
+                        toastFrame.SetActive(true);
+                        toastIcon.sprite = enemyGroupData.icon;
+                        toastTitle.text = enemyGroupData.name;
+                        toastDescription.text = enemyGroupData.description;
+                        toastFrame.GetComponent<RectTransform>().DOLocalMoveX(714f,0.8f).OnComplete(()=>{
+                            Invoke("HideToast",2f);
+                        });
+                        break;
+                }
                 enemyGroupData.created = true;
-                Debug.Log("Create Enemy");
+                Debug.Log("Do Enemy Action");
             }
         }
+    }
+    private void HideToast(){
+        toastFrame.GetComponent<RectTransform>().DOLocalMoveX(1210f,0.8f).OnComplete(()=>{
+            toastFrame.SetActive(false);
+            is_toasting = false;
+        });
     }
 }
