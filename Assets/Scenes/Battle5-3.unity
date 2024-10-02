@@ -643,8 +643,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 0.82525444, g: 0.9600575, b: 0.96981126, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 0.709968, g: 0.83109105, b: 0.9245283, a: 1}
+  m_Intensity: 1.52
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1247,7 +1247,7 @@ Transform:
   m_GameObject: {fileID: 287226292}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.95, y: 9.61, z: -7.5}
+  m_LocalPosition: {x: -28.4, y: 20.1, z: -5.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1263,8 +1263,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 2
-  m_Color: {r: 0.8886792, g: 0.98047, b: 1, a: 1}
-  m_Intensity: 2.78
+  m_Color: {r: 0.80566037, g: 0.9652965, b: 1, a: 1}
+  m_Intensity: 3.2
   m_Range: 35.3
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -2222,7 +2222,6 @@ Transform:
   - {fileID: 1756216083}
   - {fileID: 1548504147}
   - {fileID: 1771451531}
-  - {fileID: 1332415344}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &627549531
@@ -4088,37 +4087,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.006356582, y: 0.006356567, z: 0.010809289}
   m_Center: {x: -0.015001534, y: -0.02975778, z: -0.0022898135}
---- !u!1 &1332415343
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1332415344}
-  m_Layer: 6
-  m_Name: Paths
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1332415344
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1332415343}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 620825011}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1346156869
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,9 @@ public class CharCreator : MonoBehaviour
     public Image respawnCircle;
     public Text respawnCircleText;
     private float wait = 0;
+    public bool is_machine = false;
+    public Text machine_count;
+    public int machine_c = 10;
     public enum charType
     {
         lowLand,
@@ -27,14 +30,30 @@ public class CharCreator : MonoBehaviour
     public void CreateChar(){
         if(wait == 0 && BattleController.Instance.cost >= cost){
             BattleController.Instance.cost -= cost;
-            GameObject c = Instantiate(CharPrefab);
-            Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
-            Vector3 m_MousePos = new Vector3(Input.mousePosition.x,Input.mousePosition.y, pos.z);
-            c.transform.position = Camera.main.ScreenToWorldPoint(m_MousePos);   
-            c.GetComponent<Char>().createBtn = gameObject;
-            gameObject.SetActive(false);
-            BattleController.Instance.is_place = true;
-            BattleController.Instance.is_lowland = type == charType.lowLand;
+            if(!is_machine){
+                GameObject c = Instantiate(CharPrefab);
+                Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+                Vector3 m_MousePos = new Vector3(Input.mousePosition.x,Input.mousePosition.y, pos.z);
+                c.transform.position = Camera.main.ScreenToWorldPoint(m_MousePos);   
+                c.GetComponent<Char>().createBtn = gameObject;
+                gameObject.SetActive(false);
+                BattleController.Instance.is_place = true;
+                BattleController.Instance.is_lowland = type == charType.lowLand;
+            }else{
+                if(machine_c > 0){
+                    machine_c--;
+                }else{
+                    return;
+                }
+                GameObject m = Instantiate(CharPrefab);
+                Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
+                Vector3 m_MousePos = new Vector3(Input.mousePosition.x,Input.mousePosition.y, pos.z);
+                m.transform.position = Camera.main.ScreenToWorldPoint(m_MousePos);   
+                machine_count.text = "x"+machine_c.ToString();
+                BattleController.Instance.is_place = true;
+                BattleController.Instance.is_lowland = true;
+                Respawn();
+            }
         }
     }
     private void Update() {

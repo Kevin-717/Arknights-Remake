@@ -9,6 +9,7 @@ public class BattleController : MonoBehaviour
     public enum damageType{
         Physics,
         Abillity,
+        Real,
         Revitalize
     }
     public static BattleController Instance;

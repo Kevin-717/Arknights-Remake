@@ -29,11 +29,11 @@ public class EnemyMove : MonoBehaviour
     }
     public void UpdatePath(Vector3 targetPosition)
     {
-        if (Vector3.Distance(targetPosition, targetLastPosition) > 0.1f)
-        {
+        // if (Vector3.Distance(targetPosition, targetLastPosition) > 0.1f)
+        // {
             targetLastPosition = targetPosition;
             seeker.StartPath(transform.position, targetPosition, OnPathComplete);
-        }
+        // }
     }
     public void NextTarget()
     {
@@ -71,6 +71,11 @@ public class EnemyMove : MonoBehaviour
             Vector3 dir = (nextTargetPosition - transform.position).normalized;
             Vector3 velocity = dir * speed * speedFactor;
             transform.position += velocity * Time.deltaTime;
+            if(path.vectorPath[currentWaypoint].x > transform.position.x){
+                transform.eulerAngles = new Vector3(-30,0,0);
+            }else{
+                transform.eulerAngles = new Vector3(30,180,0);
+            }
         }
         else
             path = null;

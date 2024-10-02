@@ -86,7 +86,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4733092465088272429}
-  - component: {fileID: 8015571561463616272}
+  - component: {fileID: 3679796744548104296}
   m_Layer: 8
   m_Name: Collider
   m_TagString: Enemy
@@ -103,14 +103,14 @@ Transform:
   m_GameObject: {fileID: 3735850747543593759}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 1.15, z: 0.66}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2599422061166543353}
   m_LocalEulerAnglesHint: {x: -60, y: 0, z: 0}
---- !u!65 &8015571561463616272
-BoxCollider:
+--- !u!135 &3679796744548104296
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -128,8 +128,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.999776, y: 2.3282833, z: 1.0869337}
-  m_Center: {x: 0.1624297, y: 0.9504133, z: -0.6833493}
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3830042437528517831
 GameObject:
   m_ObjectHideFlags: 0
@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 6480123352837147891}
   - component: {fileID: 9044190992222106436}
   - component: {fileID: 6648977040734340964}
+  - component: {fileID: 7842348628504102019}
   m_Layer: 8
   m_Name: Enemy1000_2
   m_TagString: Enemy
@@ -406,7 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  drawGizmos: 1
+  drawGizmos: 0
   detailedGizmos: 0
   startEndModifier:
     addPoints: 0
@@ -474,6 +475,20 @@ MonoBehaviour:
   enemyType: 0
   inhole: 0
   addTime: 5
+--- !u!114 &7842348628504102019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4536855544549114805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf57a28070d5b547835c65c924a76d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buffs: []
+  isEnemy: 1
 --- !u!1 &6641773145520889851
 GameObject:
   m_ObjectHideFlags: 0

@@ -73,6 +73,8 @@ public class Char : MonoBehaviour
             value = Mathf.Max(0.05f*damage,damage-def);
         }else if(dt == BattleController.damageType.Abillity){
             value = Mathf.Max(0.05f*damage,damage*(1-adef*0.01f));
+        }else if(dt == BattleController.damageType.Real){
+            value = damage;
         }
         hp -= value;
         if(hp <= 0){
@@ -157,7 +159,6 @@ public class Char : MonoBehaviour
     private void OnStart(){
         if(first == "getPos"){
             if(!can_put){
-                
                 Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
                 Vector3 m_MousePos = new Vector3(Input.mousePosition.x,Input.mousePosition.y, pos.z);
                 Vector3 wp = Camera.main.ScreenToWorldPoint(m_MousePos);
@@ -277,19 +278,10 @@ public class Char : MonoBehaviour
         }
     }
     private void OnTriggerExit(Collider other) {
-        if(dt == BattleController.damageType.Revitalize){
-            if(enemyList.IndexOf(other.gameObject) != -1 && state != Die_anim && state != Start_anim){
-                state = Idle_anim;
-                enemyList.Remove(other.gameObject);
-            }  
-        }
-        else{
-            if(other.gameObject.tag == "Enemy" && enemyList.IndexOf(other.gameObject) != -1 && state != Die_anim && state != Start_anim){
-                state = Idle_anim;
-                enemyList.Remove(other.gameObject);
-            }  
-        }
-  
+        if(other.gameObject.tag == "Enemy" && enemyList.IndexOf(other.gameObject) != -1 && state != Die_anim && state != Start_anim){
+            state = Idle_anim;
+            enemyList.Remove(other.gameObject);
+        }  
     }
     private void OnDestroy() {
         if(createBtn != null){

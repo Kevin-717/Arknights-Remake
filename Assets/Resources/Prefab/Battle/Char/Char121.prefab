@@ -198,6 +198,7 @@ GameObject:
   - component: {fileID: 1711541427043379570}
   - component: {fileID: 4121685008941270739}
   - component: {fileID: 198729364384296158}
+  - component: {fileID: -2036725392171193883}
   m_Layer: 8
   m_Name: Char121
   m_TagString: char
@@ -324,7 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dc0b810993091946b0979923fe0b3df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 641
+  hp: 1141
   HpAnim: {fileID: 4818378871598084007}
   HpBar: {fileID: 7358254540810156269}
   totalHp: 0
@@ -333,7 +334,7 @@ MonoBehaviour:
   Attack_anim: Attack
   Die_anim: Die
   state: 
-  damage: 321
+  damage: 582
   can_put: 0
   ct: 1
   getDFrame: {fileID: 3302530239779535053}
@@ -343,8 +344,8 @@ MonoBehaviour:
   dCircle: {fileID: 5405290982211384531}
   targetCollider: {fileID: 8609496434718975592}
   createBtn: {fileID: 0}
-  def: 41
-  adef: 10
+  def: 95
+  adef: 15
   dt: 1
   dd: 0
   is_range: 1
@@ -405,6 +406,20 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &-2036725392171193883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136114948656059760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf57a28070d5b547835c65c924a76d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buffs: []
+  isEnemy: 0
 --- !u!1 &3169546062584393563
 GameObject:
   m_ObjectHideFlags: 0

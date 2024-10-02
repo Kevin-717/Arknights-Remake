@@ -77,7 +77,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &3735850747543593759
+--- !u!1 &3450812346998072557
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -85,8 +85,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4733092465088272429}
-  - component: {fileID: 8015571561463616272}
+  - component: {fileID: 1746388315761363683}
+  - component: {fileID: 1365899744315540843}
   m_Layer: 8
   m_Name: Collider
   m_TagString: Enemy
@@ -94,28 +94,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4733092465088272429
+--- !u!4 &1746388315761363683
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3735850747543593759}
+  m_GameObject: {fileID: 3450812346998072557}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.5, y: 0, z: 0, w: 0.8660254}
-  m_LocalPosition: {x: 0, y: 1.15, z: 0.66}
+  m_LocalRotation: {x: -0.5, y: -0, z: -0, w: 0.86602545}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2599422061166543353}
   m_LocalEulerAnglesHint: {x: -60, y: 0, z: 0}
---- !u!65 &8015571561463616272
-BoxCollider:
+--- !u!135 &1365899744315540843
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3735850747543593759}
+  m_GameObject: {fileID: 3450812346998072557}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -128,8 +128,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.2277713, y: 1.7667127, z: 1.0869337}
-  m_Center: {x: 0.28579274, y: 0.66962755, z: -0.68334925}
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3830042437528517831
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +223,7 @@ GameObject:
   - component: {fileID: 1004183514676547331}
   - component: {fileID: 8210946027777784998}
   - component: {fileID: 1517425152553948295}
+  - component: {fileID: 3709948375577054240}
   m_Layer: 8
   m_Name: Enemy1005_2
   m_TagString: Enemy
@@ -243,8 +244,8 @@ Transform:
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1746388315761363683}
   - {fileID: 397077999418797481}
-  - {fileID: 4733092465088272429}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -30, y: 0, z: 0}
 --- !u!33 &3381100852794305036
@@ -380,8 +381,8 @@ MonoBehaviour:
     unityHandler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 8210946027777784998}
-          m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+        - m_Target: {fileID: 1517425152553948295}
+          m_TargetAssemblyTypeName: NcBow, Assembly-CSharp
           m_MethodName: Damage
           m_Mode: 1
           m_Arguments:
@@ -405,7 +406,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  drawGizmos: 1
+  drawGizmos: 0
   detailedGizmos: 0
   startEndModifier:
     addPoints: 0
@@ -490,6 +491,20 @@ MonoBehaviour:
   interval: 3
   damage: 220
   dt: 0
+--- !u!114 &3709948375577054240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4536855544549114805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bf57a28070d5b547835c65c924a76d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buffs: []
+  isEnemy: 1
 --- !u!1 &6641773145520889851
 GameObject:
   m_ObjectHideFlags: 0

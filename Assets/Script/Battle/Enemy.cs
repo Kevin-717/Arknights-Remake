@@ -74,6 +74,7 @@ public class Enemy : MonoBehaviour{
         rb = GetComponent<Rigidbody>();
     }
     private void Move(){
+        enemyMove.UpdatePath(move_line[move_index].path);
         if(Vector3.Distance(move_line[move_index].path,transform.position) <= 0.3f){
             move_index++;
             if(move_index >= move_line.Count){
@@ -120,16 +121,15 @@ public class Enemy : MonoBehaviour{
                 rb.transform.Translate(movement*speed*Time.deltaTime);
                 rb.transform.position = new Vector3(rb.transform.position.x,rb.transform.position.y,0);
             }else{
-                enemyMove.UpdatePath(move_line[move_index].path);
                 enemyMove.NextTarget();
-                float x = transform.position.x;
-                float dx = move_line[move_index].path.x;
-                float mx = (Mathf.Abs(x-dx)<=0.1f)?0:(x>dx?-1:1);
-                if(mx < 0){
-                    transform.eulerAngles = new Vector3(30,180,0);
-                }else{
-                    transform.eulerAngles = new Vector3(-30,0,0);
-                }
+                // float x = transform.position.x;
+                // float dx = move_line[move_index].path.x;
+                // float mx = (Mathf.Abs(x-dx)<=0.1f)?0:(x>dx?-1:1);
+                // if(mx < 0){
+                //     transform.eulerAngles = new Vector3(30,180,0);
+                // }else{
+                //     transform.eulerAngles = new Vector3(-30,0,0);
+                // }
             }
             // Vector3 movement = new Vector3(mx,my,mz);
             // transform.Translate(movement*speed*Time.deltaTime);
@@ -194,6 +194,8 @@ public class Enemy : MonoBehaviour{
             hpScale = hp/totalHp;
             animScale = hp/totalHp;
             return;
+        }else if(dt == BattleController.damageType.Real){
+            value = damage;
         }
         hp -= value;
         if(hp <= 0){
