@@ -32,6 +32,7 @@ public class EnemyController : MonoBehaviour
     public static EnemyController Instance;
     public string levelDataFile = "";
     public string enemyDataFile = "";
+    public int enemyNum = 0;
     private JObject levelData;
     private JObject enemyData;
     public List<EnemyGroupData> enemyDatas = new List<EnemyGroupData>();
@@ -132,6 +133,7 @@ public class EnemyController : MonoBehaviour
                                 endp.path = new Vector3((float)routeData["endPosition"]["col"],(float)routeData["endPosition"]["row"],0);
                                 enemyGroupData.enemyPath.Add(endp);
                                 enemyGroupData.repeat = (int)enemy["count"];
+                                enemyNum+=(int)enemy["count"];
                                 enemyGroupData.interval = (float)enemy["interval"];
                                 enemyGroupData.startTime = publicDelayTime + (float)enemy["preDelay"]+(float)fragment["preDelay"];
                                 if(fragment["actions"][fragment["actions"].ToList().Count-1] == enemy){

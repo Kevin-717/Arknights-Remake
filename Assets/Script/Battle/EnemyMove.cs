@@ -69,7 +69,7 @@ public class EnemyMove : MonoBehaviour
         {
             nextTargetPosition = path.vectorPath[currentWaypoint];
             Vector3 dir = (nextTargetPosition - transform.position).normalized;
-            Vector3 velocity = dir * speed * speedFactor;
+            Vector3 velocity = dir * speed * 0.5f * speedFactor;
             transform.position += velocity * Time.deltaTime;
             if(path.vectorPath[currentWaypoint].x > transform.position.x){
                 transform.eulerAngles = new Vector3(-30,0,0);

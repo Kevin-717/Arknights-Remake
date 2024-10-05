@@ -279,7 +279,6 @@ public class Char : MonoBehaviour
     }
     private void OnTriggerExit(Collider other) {
         if(other.gameObject.tag == "Enemy" && enemyList.IndexOf(other.gameObject) != -1 && state != Die_anim && state != Start_anim){
-            state = Idle_anim;
             enemyList.Remove(other.gameObject);
         }  
     }

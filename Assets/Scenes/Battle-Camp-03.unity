@@ -19226,6 +19226,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelDataFile: \levels\obt\campaign\level_camp_03.json
   enemyDataFile: \levels\enemydata\enemy_database.json
+  enemyNum: 0
   enemyDatas: []
   toastFrame: {fileID: 810523091}
   toastIcon: {fileID: 1768077029}

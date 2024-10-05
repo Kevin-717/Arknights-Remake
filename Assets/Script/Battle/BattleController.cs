@@ -78,7 +78,7 @@ public class BattleController : MonoBehaviour
         costText.text = cost.ToString();
     }
     private void UpdateText(){
-        enemyText.text = enemyNum.ToString() + " / " + "?";
+        enemyText.text = enemyNum.ToString() + " / " + EnemyController.Instance.enemyNum.ToString();
         lifeText.text = life.ToString();
     }
     private void Update() {
