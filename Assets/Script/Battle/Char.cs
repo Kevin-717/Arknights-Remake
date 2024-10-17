@@ -162,7 +162,7 @@ public class Char : MonoBehaviour
                 Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
                 Vector3 m_MousePos = new Vector3(Input.mousePosition.x,Input.mousePosition.y, pos.z);
                 Vector3 wp = Camera.main.ScreenToWorldPoint(m_MousePos);
-                transform.position = new Vector3(wp.x,wp.y,0);
+                transform.position = new Vector3(wp.x,wp.y,-0.01f);
             }
             RaycastHit[] hitInfos;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -227,6 +227,10 @@ public class Char : MonoBehaviour
                 CharDetail.Instance.Hide();
                 state = Start_anim;
                 BattleController.Instance.is_place = false;
+                Material material = new Material(GetComponent<MeshRenderer>().material);
+                MaterialPropertyBlock propertyBlock = new MaterialPropertyBlock();
+                propertyBlock.SetFloat("_angle",di=="right" ? -30f : 60f);
+                GetComponent<MeshRenderer>().SetPropertyBlock(propertyBlock);
                 skeletonAnimation.state.Complete += delegate {
                     state = Idle_anim;
                 };

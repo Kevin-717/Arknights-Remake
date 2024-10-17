@@ -219,9 +219,9 @@ QualitySettings:
     pixelLightCount: 99
     shadows: 2
     shadowResolution: 3
-    shadowProjection: 1
-    shadowCascades: 2
-    shadowDistance: 100
+    shadowProjection: 0
+    shadowCascades: 4
+    shadowDistance: 30
     shadowNearPlaneOffset: 3
     shadowCascade2Split: 0.20453192
     shadowCascade4Split: {x: 0.06666667, y: 0.2, z: 0.46666667}

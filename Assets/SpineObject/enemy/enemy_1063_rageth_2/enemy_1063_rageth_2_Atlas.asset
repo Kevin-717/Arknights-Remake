@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6b194f808b1af6499c93410e504af42, type: 3}
+  m_Name: enemy_1063_rageth_2_Atlas
+  m_EditorClassIdentifier: 
+  atlasFile: {fileID: 4900000, guid: cd64bc96053176344b54f4af9a0b63de, type: 3}
+  materials:
+  - {fileID: 2100000, guid: 57567a8d5b2a4974db0c8a1c168bf5b1, type: 2}

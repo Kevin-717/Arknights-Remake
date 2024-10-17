@@ -75,7 +75,12 @@ public class EnemyMove : MonoBehaviour
                 transform.eulerAngles = new Vector3(-30,0,0);
             }else{
                 transform.eulerAngles = new Vector3(30,180,0);
+                
             }
+            Material material = new Material(GetComponent<MeshRenderer>().material);
+            MaterialPropertyBlock propertyBlock = new MaterialPropertyBlock();
+            propertyBlock.SetFloat("_angle",path.vectorPath[currentWaypoint].x < transform.position.x ? -30f : 60f);
+            GetComponent<MeshRenderer>().SetPropertyBlock(propertyBlock);
         }
         else
             path = null;

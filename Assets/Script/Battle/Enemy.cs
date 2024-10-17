@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using Spine.Unity;
 using Pathfinding;
-using Unity.VisualScripting;
 
 public class Enemy : MonoBehaviour{
     private SkeletonAnimation spine_anim;
@@ -117,6 +116,10 @@ public class Enemy : MonoBehaviour{
                 }else{
                     transform.eulerAngles = new Vector3(-30,0,0);
                 }
+                Material material = new Material(GetComponent<MeshRenderer>().material);
+                MaterialPropertyBlock propertyBlock = new MaterialPropertyBlock();
+                propertyBlock.SetFloat("_angle",mx<0 ? -30f : 60f);
+                GetComponent<MeshRenderer>().SetPropertyBlock(propertyBlock);
                 Vector3 movement = new Vector3(mx,my,0);
                 rb.transform.Translate(movement*speed*Time.deltaTime);
                 rb.transform.position = new Vector3(rb.transform.position.x,rb.transform.position.y,0);
