@@ -55,3 +55,6 @@ TagManager:
   - name: Mask
     uniqueID: 3676396453
     locked: 0
+  - name: Line
+    uniqueID: 4029624749
+    locked: 0
