@@ -7,8 +7,8 @@ using Newtonsoft.Json.Linq;
 using System.Linq;
 using UnityEngine.UI;
 using DG.Tweening;
-using UnityEditor.PackageManager;
 using System;
+
 [System.Serializable]
 public class EnemyPath{
     public Vector3 path;
@@ -45,6 +45,7 @@ public class EnemyController : MonoBehaviour
     public Text toastDescription;
     public bool is_toasting = false;
     public bool is_rogue_like = false;
+    public bool flag = false;
     private void Start() {
         Instance = this;
         levelDataFile = Application.streamingAssetsPath+levelDataFile;
@@ -70,7 +71,7 @@ public class EnemyController : MonoBehaviour
                 foreach(var enemy in fragment["actions"]){
                     Debug.Log("Load Enemy ->" + enemy.ToString());
                     try{
-                        object at = is_rogue_like ? enemy["actionType"].ToString() : (int)enemy["actionType"];
+                        object at = (is_rogue_like||flag) ? enemy["actionType"].ToString() : (int)enemy["actionType"];
                         switch(at){
                             case "ACTIVATE_PREDEFINED":
                             case "SPAWN":
@@ -108,7 +109,7 @@ public class EnemyController : MonoBehaviour
                                 Vector3 p = pos;
                                 foreach(var point in routeData["checkpoints"].ToList()){
                                     EnemyPath enemyPath = new EnemyPath();
-                                    object pt = is_rogue_like ? point["type"].ToString() : (int)point["type"];
+                                    object pt = (is_rogue_like || flag) ? point["type"].ToString() : (int)point["type"];
                                     switch(pt){
                                         case "MOVE":
                                         case 0:

@@ -73,6 +73,24 @@ public class Enemy : MonoBehaviour{
             state = Move_anim;
         }
         rb = GetComponent<Rigidbody>();
+        if(move_line[move_index].pointType == PointType.wait){
+            waitTime = move_line[move_index].waitTime;
+            state = Idle_anim;
+            move_index--;
+            return;
+        }else if(move_line[move_index].pointType == PointType.disappear){
+            GetComponent<MeshRenderer>().enabled = false;
+            HpBar.transform.parent.gameObject.SetActive(false);
+            inhole = true;
+            return;
+        }else if(move_line[move_index].pointType == PointType.appear){
+            transform.position = move_line[move_index].path;
+            HpBar.transform.parent.gameObject.SetActive(true);
+            inhole = false;
+            GetComponent<MeshRenderer>().enabled = true;
+            move_index++;
+            return;
+        }
     }
     private void Move(){
         enemyMove.UpdatePath(move_line[move_index].path);

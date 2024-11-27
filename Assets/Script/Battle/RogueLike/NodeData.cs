@@ -6,4 +6,11 @@ public class NodeData : MonoBehaviour
 {
     public Transform connect_frame;
     public Transform connect_frame_before;
+    public MapCreator.Node.NodeType nodeType;
+    public string levelName = "";
+    public string levelDesc = "";
+    public string levelSence = "";
+    public void OnClick(){
+        UIManager.instance.ShowBattleEntrance(levelName,levelDesc,levelSence);
+    }
 }

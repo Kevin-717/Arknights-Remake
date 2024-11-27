@@ -403,7 +403,7 @@ MonoBehaviour:
   HpAnim: {fileID: 4966663241255571957}
   HpBar: {fileID: 2105184429502642582}
   totalHp: 0
-  damage: 200
+  damage: 1000
   Move_anim: Move
   Idle_anim: Idle
   Attack_anim: Attack
@@ -420,6 +420,7 @@ MonoBehaviour:
   enemyType: 0
   inhole: 0
   addTime: 5
+  tags: []
 --- !u!114 &3086611150311781768
 MonoBehaviour:
   m_ObjectHideFlags: 0

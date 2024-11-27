@@ -8,7 +8,7 @@ public class CurseDevice : MonoBehaviour
     private float total_sp = 7;
     private float sp = 0;
     public Transform progress;
-    public new ParticleSystem particleSystem;
+    public ParticleSystem particleSystem;
     private void Update() {
         foreach(GameObject chara in GameObject.FindGameObjectsWithTag("char")){
             if(chara.GetComponent<Char>().state != "Default" &&

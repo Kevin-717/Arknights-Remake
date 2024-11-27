@@ -96,6 +96,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Battle/Camp/Battle-Camp-03.unity
     guid: ebe88c322631ed7469191e9f1419b1ff
   - enabled: 1
+    path: Assets/Scenes/Roguelike/CharChooseUI.unity
+    guid: 9b3a7a6c03ef1c0478fb44388a2e6aea
+  - enabled: 1
+    path: Assets/Scenes/Roguelike/RogueLevel.unity
+    guid: e003fe5c2454a8c4ea967643e90c7cd0
+  - enabled: 1
     path: Assets/Scenes/Battle/Roguelike/level1/1-1.unity
     guid: c8a1ee1e53e2efa4e8323fb5e949fd8c
   - enabled: 1

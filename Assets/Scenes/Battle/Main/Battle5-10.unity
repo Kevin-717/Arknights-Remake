@@ -19433,6 +19433,7 @@ MonoBehaviour:
   toastTitle: {fileID: 241502080}
   toastDescription: {fileID: 1652366256}
   is_toasting: 0
+  is_rogue_like: 0
 --- !u!1 &1543348109
 GameObject:
   m_ObjectHideFlags: 0
@@ -24606,7 +24607,7 @@ MonoBehaviour:
   lifeText: {fileID: 944496131}
   life: 5
   enemyNum: 0
-  parent_scene: Scenes/LevelList5
+  parent_scene: Scenes/LevelEnter/LevelList5
   runImage: {fileID: -333694956, guid: bc0295edcf8f17a4d9ec264b889d59e0, type: 3}
   pauseImage: {fileID: -977435905, guid: 1f603aa2cba37864d83ede2b3c1c8c42, type: 3}
   _1x: {fileID: -709176768, guid: 201b5b6442c1e234c9886a3a31497c95, type: 3}

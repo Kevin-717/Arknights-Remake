@@ -2782,8 +2782,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -0.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1922979821}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &415537490
@@ -10003,6 +10002,7 @@ MonoBehaviour:
   toastTitle: {fileID: 1317542000}
   toastDescription: {fileID: 987408200}
   is_toasting: 0
+  is_rogue_like: 0
 --- !u!1 &1547553741
 GameObject:
   m_ObjectHideFlags: 0
@@ -13180,7 +13180,7 @@ MonoBehaviour:
   lifeText: {fileID: 944496131}
   life: 5
   enemyNum: 0
-  parent_scene: Scenes/LevelList1
+  parent_scene: Scenes/LevelEnter/LevelList1
   runImage: {fileID: -333694956, guid: bc0295edcf8f17a4d9ec264b889d59e0, type: 3}
   pauseImage: {fileID: -977435905, guid: 1f603aa2cba37864d83ede2b3c1c8c42, type: 3}
   _1x: {fileID: -709176768, guid: 201b5b6442c1e234c9886a3a31497c95, type: 3}
@@ -13199,11 +13199,11 @@ Transform:
   m_GameObject: {fileID: 1922979819}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.050879717, y: -0.666355, z: 0.06132126}
+  m_LocalPosition: {x: -0.050879717, y: -0.666355, z: -0.66867876}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 399890762}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1930006853
 GameObject:
@@ -15125,6 +15125,7 @@ SceneRoots:
   - {fileID: 963194228}
   - {fileID: 620825011}
   - {fileID: 1540725714}
+  - {fileID: 1922979821}
   - {fileID: 1524916406}
   - {fileID: 399890762}
   - {fileID: 1989084188}

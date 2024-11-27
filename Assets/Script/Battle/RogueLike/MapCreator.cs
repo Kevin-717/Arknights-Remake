@@ -55,6 +55,7 @@ public class MapCreator : MonoBehaviour
         int level=0,r=0,c=0;
         foreach(Node nodeLevel in nodeLevels){
             Map map = new Map();
+            List<Node.LevelDesc> levelDescs = new List<Node.LevelDesc>(nodeLevel.levelDescs);
             foreach(Node.NodeCol col in nodeLevel.nodes){
                 List<Map.NodeInfo> nc = new List<Map.NodeInfo>();
                 foreach(Node.NodeType nodeType in col.nodesCol){
@@ -63,7 +64,14 @@ public class MapCreator : MonoBehaviour
                     switch(nodeType){
                         case Node.NodeType.Store://???
                         case Node.NodeType.Battle:
-                            Node.LevelDesc l = nodeLevel.levelDescs[Random.Range(0,nodeLevel.levelDescs.Count)];
+                            Node.LevelDesc l;
+                            if(levelDescs.Count == 0){
+                                Debug.Log(nodeLevel.levelDescs.Count);
+                                l = nodeLevel.levelDescs[Random.Range(0,nodeLevel.levelDescs.Count)];
+                            }else{
+                                l = levelDescs[Random.Range(0,levelDescs.Count)];
+                            }
+                            levelDescs.Remove(l);
                             nodeInfo.levelSence = l.sence;
                             nodeInfo.levelName = l.name;
                             nodeInfo.levelDesc = l.description;
@@ -133,6 +141,10 @@ public class MapCreator : MonoBehaviour
                     case Node.NodeType.Battle:
                         n  = Instantiate(battleNodePrefab,c.transform);
                         n.name = "BattleNode-"+Random.Range(10000,99999).ToString();
+                        n.GetComponent<NodeData>().nodeType = Node.NodeType.Battle;
+                        n.GetComponent<NodeData>().levelName = row.levelName;
+                        n.GetComponent<NodeData>().levelDesc = row.levelDesc;
+                        n.GetComponent<NodeData>().levelSence = row.levelSence;
                         row.instance = n;
                         break;
                 }

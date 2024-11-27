@@ -12,6 +12,7 @@ public class CharData : MonoBehaviour
         public GameObject charPrefab;
         public int cost;
         public float waitTime;
+        public int star = 5;
         public enum CharType{
             lowLand,
             highLand,
