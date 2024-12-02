@@ -51,15 +51,16 @@ public class NcBow : MonoBehaviour
         }
     }
     public void Damage(){
+        if(enemyController.state != Attack_anim) return;
         if(attackObject != null && attackObject.GetComponent<Char>().hp > 0){
             attackObject.GetComponent<Char>().TakeDamage(damage,dt);
         }else{
-            enemyController.state = enemyController.Move_anim;
+            enemyController.state = es;
             enemyController.useSpecial = false;
             attackObject = null;
             return;
         }
-        enemyController.state = enemyController.Move_anim;
+        enemyController.state = es;
         enemyController.useSpecial = false;
         attackObject = null;
     }

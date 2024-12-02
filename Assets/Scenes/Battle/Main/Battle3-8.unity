@@ -17568,7 +17568,7 @@ Transform:
   m_GameObject: {fileID: 1439492889}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18483,6 +18483,7 @@ MonoBehaviour:
   toastDescription: {fileID: 1455167701}
   is_toasting: 0
   is_rogue_like: 0
+  flag: 0
 --- !u!1 &1542443600
 GameObject:
   m_ObjectHideFlags: 0

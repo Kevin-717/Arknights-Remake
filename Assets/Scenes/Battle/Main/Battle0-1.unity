@@ -3678,6 +3678,7 @@ MonoBehaviour:
   toastDescription: {fileID: 357709305}
   is_toasting: 0
   is_rogue_like: 0
+  flag: 0
 --- !u!1 &454304512
 GameObject:
   m_ObjectHideFlags: 0

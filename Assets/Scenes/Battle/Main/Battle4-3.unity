@@ -16747,6 +16747,7 @@ MonoBehaviour:
   toastDescription: {fileID: 1229519434}
   is_toasting: 0
   is_rogue_like: 0
+  flag: 0
 --- !u!1 &1541143414 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6466738790136816302, guid: ab4a9b617b1654f4790a3b210ac82474, type: 3}

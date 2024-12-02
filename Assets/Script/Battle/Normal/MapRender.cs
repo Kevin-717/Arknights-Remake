@@ -19,14 +19,18 @@ public class MapRender : MonoBehaviour
         canPlace.SetActive(false);
     }
     private void Update() {
-        if(BattleController.Instance.is_place && type == (BattleController.Instance.is_lowland ? LandType.lowLand : LandType.highLand) && (!show_range) && can_place){
+        if(BattleController.Instance.is_place && type == (BattleController.Instance.is_lowland ? LandType.lowLand : LandType.highLand) && can_place){
             canPlace.SetActive(true);
         }else{
             canPlace.SetActive(false);
         }
-        Ray ray = new Ray(transform.position-new Vector3(0,0,-5),transform.forward*-100);
-        RaycastHit hit;
-        if(Physics.Raycast(ray, out hit)){
+        Ray ray = new Ray(transform.position-new Vector3(0,0,-10),transform.forward*-100);
+        RaycastHit[] hits = Physics.RaycastAll(ray);
+        if(hits.Length < 1){
+            show_range = false;
+            attackRange.SetActive(false);
+        }
+        foreach(RaycastHit hit in hits){
             if(hit.collider.gameObject.tag == "attackRange" &&
              hit.collider.gameObject.GetComponentInParent<Char>().state == "Default" &&
              hit.collider.gameObject.GetComponentInParent<Char>().can_put){

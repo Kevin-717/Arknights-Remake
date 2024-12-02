@@ -263,7 +263,6 @@ public class Char : MonoBehaviour
                 }else if(ct == charType.highLand && hitInfo.collider.gameObject.tag == "highland" && hitInfo.collider.gameObject.GetComponent<MapRender>().can_place){
                     can_put = true;
                     p = hitInfo.collider.gameObject.transform.position;
-                    p.z = -0.3f;
                     transform.position = p;
                     return;
                 }else{

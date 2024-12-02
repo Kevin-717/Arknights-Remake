@@ -11,6 +11,7 @@ public class Enemy : MonoBehaviour{
     // private AIDestinationSetter aIDestinationSetter;
     // private AIPath aIPath;
     private EnemyMove enemyMove;
+    public float speedT = 3;
     public float speed = 3;
     private GameObject attackObject;
     //[HideInInspector]
@@ -40,6 +41,7 @@ public class Enemy : MonoBehaviour{
     public bool haveNormalAttack = true;
     public bool haveSecondLife = false;
     private bool flag = false;
+    private bool isDieBind = false;
     public BattleController.damageType dt;
     public enum EnemyType
     {
@@ -53,10 +55,13 @@ public class Enemy : MonoBehaviour{
     public bool inhole = false;
     public float addTime = 5;
     public List<string> tags = new List<string>();
+    public float atkSpeedScale = 1.0f;
+    public float moveSpeedScale = 1.0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        speedT = speed;
         spine_anim = GetComponent<SkeletonAnimation>();
         // aIDestinationSetter = GetComponent<AIDestinationSetter>();
         // aIPath = GetComponent<AIPath>();
@@ -73,6 +78,14 @@ public class Enemy : MonoBehaviour{
             state = Move_anim;
         }
         rb = GetComponent<Rigidbody>();
+        checkPoint();
+    }
+    public void checkPoint(){
+        if(move_index >= move_line.Count){
+            BattleController.Instance.life--;
+            Destroy(gameObject);
+            return;
+        }
         if(move_line[move_index].pointType == PointType.wait){
             waitTime = move_line[move_index].waitTime;
             state = Idle_anim;
@@ -96,29 +109,7 @@ public class Enemy : MonoBehaviour{
         enemyMove.UpdatePath(move_line[move_index].path);
         if(Vector3.Distance(move_line[move_index].path,transform.position) <= 0.3f){
             move_index++;
-            if(move_index >= move_line.Count){
-                BattleController.Instance.life--;
-                Destroy(gameObject);
-                return;
-            }
-            if(move_line[move_index].pointType == PointType.wait){
-                waitTime = move_line[move_index].waitTime;
-                state = Idle_anim;
-                move_index--;
-                return;
-            }else if(move_line[move_index].pointType == PointType.disappear){
-                GetComponent<MeshRenderer>().enabled = false;
-                HpBar.transform.parent.gameObject.SetActive(false);
-                inhole = true;
-                return;
-            }else if(move_line[move_index].pointType == PointType.appear){
-                transform.position = move_line[move_index].path;
-                HpBar.transform.parent.gameObject.SetActive(true);
-                inhole = false;
-                GetComponent<MeshRenderer>().enabled = true;
-                move_index++;
-                return;
-            }
+            checkPoint();
         }else{
             if(enemyType == EnemyType.Fly){
                 float x = transform.position.x;
@@ -168,6 +159,8 @@ public class Enemy : MonoBehaviour{
     // Update is called once per frame
     void Update()
     {
+        speed = speedT * moveSpeedScale;
+        spine_anim.timeScale = atkSpeedScale;
         UpdateHpBar();
         if(spine_anim.AnimationName != state){
             if(state != Die_anim){
@@ -223,9 +216,11 @@ public class Enemy : MonoBehaviour{
         hp -= value;
         if(hp <= 0){
             if(!haveSecondLife || flag){
+                if(isDieBind) return;
                 hp = 0;
                 state = Die_anim;
                 enemyMove.speed = 0;
+                isDieBind = true;
                 spine_anim.state.Complete += delegate{
                     if(state == "Die"){
                         Destroy(gameObject);
