@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour 
 {
     public static UIManager instance;
@@ -18,6 +19,9 @@ public class UIManager : MonoBehaviour
         battleTitle.text = name;
         battleDescription.text = description;
         currentSence = sence;
+    }
+    public void LoadBattleScene(){
+        SceneManager.LoadScene(BattleInfo.instance.scene_ind);
     }
     private void Update() {
         if(Input.GetMouseButtonDown(1)){

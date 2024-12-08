@@ -8,6 +8,7 @@ public class RogueLikeCharLoader : MonoBehaviour
     public Transform frame;
     private RectTransform rectTransform;
     public List<Sprite> raities = new List<Sprite>();
+
     private void Start() {
         rectTransform = GetComponent<RectTransform>();
         int col = 0;
@@ -27,6 +28,7 @@ public class RogueLikeCharLoader : MonoBehaviour
                     b.GetComponent<RogueLikeBtn>().raity.sprite = raities[character.star-1];
                     b.GetComponent<RogueLikeBtn>().charName.text = character.charName;
                     b.GetComponent<RogueLikeBtn>().charIcon.sprite = character.image;
+                    b.GetComponent<RogueLikeBtn>().charId = character.id;
                 }
             }
         }

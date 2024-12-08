@@ -2,8 +2,10 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class MapCreator : MonoBehaviour 
 {
+    public static MapCreator instance;
     [System.Serializable]
     public class Node
     {
@@ -128,14 +130,16 @@ public class MapCreator : MonoBehaviour
             li++;
         }
     }
-    private void DrawNode(int index){
-        Map map = maps[index];
+    private void DrawNode(Map m){
+        Map map = m;
+        Debug.Log(map);
         int x = 500;
         foreach(List<Map.NodeInfo> col in map.nodes){
             GameObject c = Instantiate(colPrefab,node_frame);
             c.transform.localPosition = new Vector3(x,-500,0);
             foreach(Map.NodeInfo row in col){
                 GameObject n;
+                            Debug.Log("drawing");
                 switch(row.nodeType){
                     case Node.NodeType.Store:
                     case Node.NodeType.Battle:
@@ -145,6 +149,7 @@ public class MapCreator : MonoBehaviour
                         n.GetComponent<NodeData>().levelName = row.levelName;
                         n.GetComponent<NodeData>().levelDesc = row.levelDesc;
                         n.GetComponent<NodeData>().levelSence = row.levelSence;
+                        Debug.Log(n);
                         row.instance = n;
                         break;
                 }
@@ -162,8 +167,8 @@ public class MapCreator : MonoBehaviour
                     GameObject t3t = Instantiate(pointPrefab,lineEnd.transform);
                     GameObject t4t = Instantiate(pointPrefab,lineEnd.transform);
                     t1t.transform.localPosition = new Vector3(0,0,0);
-                    t2t.transform.localPosition = new Vector3(100,0,0);
-                    t3t.transform.localPosition = new Vector3(-100,0,0);
+                    t2t.transform.localPosition = new Vector3(60,0,0);
+                    t3t.transform.localPosition = new Vector3(-60,0,0);
                     t4t.transform.localPosition = new Vector3(-10,0,0);
                     Curve curve = line.GetComponent<Curve>();
                     curve.posList[0] = t1t.transform;
@@ -176,8 +181,19 @@ public class MapCreator : MonoBehaviour
         }
     }
     private void Start() {
+        instance = this;
         CreateNode();
-        DrawNode(0);
+        DrawNode(maps[0]);
     }
-
+    public void ReDraw(){
+        SceneManager.LoadScene("Scenes/Roguelike/RogueLevel");
+        StartCoroutine(redraw());
+    }
+    IEnumerator redraw(){
+        yield return null;
+        Debug.Log(GameObject.FindGameObjectWithTag("RogueLikeFrame"));
+        node_frame = GameObject.FindGameObjectWithTag("RogueLikeFrame").transform;
+        Debug.Log(maps[0].nodes.Count);
+        DrawNode(maps[0]);
+    }
 }

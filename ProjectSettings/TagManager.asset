@@ -12,6 +12,9 @@ TagManager:
   - highland
   - char
   - data2
+  - RogueData
+  - RogueController
+  - RogueLikeFrame
   layers:
   - Default
   - TransparentFX

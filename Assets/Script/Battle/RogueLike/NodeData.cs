@@ -12,5 +12,6 @@ public class NodeData : MonoBehaviour
     public string levelSence = "";
     public void OnClick(){
         UIManager.instance.ShowBattleEntrance(levelName,levelDesc,levelSence);
+        BattleInfo.instance.scene_ind = levelSence;
     }
 }
