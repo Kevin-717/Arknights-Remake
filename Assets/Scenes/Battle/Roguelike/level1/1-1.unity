@@ -169,6 +169,7 @@ MonoBehaviour:
   canPlace: {fileID: 2018415092}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &4607332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -690,6 +691,7 @@ MonoBehaviour:
   canPlace: {fileID: 1498794098}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &120945591
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1960,6 +1962,7 @@ MonoBehaviour:
   canPlace: {fileID: 1369836808}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &348266738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3053,6 +3056,7 @@ MonoBehaviour:
   canPlace: {fileID: 1117623253}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &506426693
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4281,6 +4285,7 @@ MonoBehaviour:
   canPlace: {fileID: 682266330}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &676639139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4771,6 +4776,7 @@ MonoBehaviour:
   canPlace: {fileID: 1254801571}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &732336654
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4842,6 +4848,7 @@ MonoBehaviour:
   canPlace: {fileID: 1191656274}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &734946352
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5187,6 +5194,7 @@ MonoBehaviour:
   canPlace: {fileID: 606588610}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &796879337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5537,6 +5545,7 @@ MonoBehaviour:
   canPlace: {fileID: 1177280864}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &855146221
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5861,6 +5870,7 @@ MonoBehaviour:
   canPlace: {fileID: 1457667305}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &891691738
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5882,6 +5892,139 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &898615363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 898615364}
+  - component: {fileID: 898615367}
+  - component: {fileID: 898615366}
+  - component: {fileID: 898615365}
+  m_Layer: 5
+  m_Name: Button (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &898615364
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898615363}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1402747450}
+  m_Father: {fileID: 1524916406}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -822, y: 308}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &898615365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898615363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 898615366}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1922979820}
+        m_TargetAssemblyTypeName: BattleController, Assembly-CSharp
+        m_MethodName: QuitRogueLikeTest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &898615366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898615363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &898615367
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 898615363}
+  m_CullTransparentMesh: 1
 --- !u!1 &899752792
 GameObject:
   m_ObjectHideFlags: 0
@@ -6035,6 +6178,7 @@ MonoBehaviour:
   canPlace: {fileID: 1257851764}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &915691958
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7150,6 +7294,7 @@ MonoBehaviour:
   canPlace: {fileID: 1352642260}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1037289981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8556,6 +8701,7 @@ MonoBehaviour:
   canPlace: {fileID: 458988759}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1190910489
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9668,7 +9814,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1922979820}
         m_TargetAssemblyTypeName: BattleController, Assembly-CSharp
-        m_MethodName: QuitBattle
+        m_MethodName: QuitRogueLike
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9766,6 +9912,7 @@ MonoBehaviour:
   canPlace: {fileID: 1233789350}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1265802699
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10353,6 +10500,7 @@ MonoBehaviour:
   canPlace: {fileID: 1228050848}
   can_place: 1
   type: 1
+  all: 0
 --- !u!1 &1330023307
 GameObject:
   m_ObjectHideFlags: 0
@@ -11128,6 +11276,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1397131904}
   m_CullTransparentMesh: 1
+--- !u!1 &1402747449
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1402747450}
+  - component: {fileID: 1402747452}
+  - component: {fileID: 1402747451}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1402747450
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402747449}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 898615364}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1402747451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402747449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 16
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u6D4B\u8BD5\u6A21\u5F0F\u9000\u51FA\u6309\u94AE"
+--- !u!222 &1402747452
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402747449}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1408536563
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11583,6 +11810,7 @@ MonoBehaviour:
   canPlace: {fileID: 1330023307}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1491757749
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11729,6 +11957,7 @@ MonoBehaviour:
   canPlace: {fileID: 790237497}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1514446132
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11949,6 +12178,7 @@ RectTransform:
   - {fileID: 627549532}
   - {fileID: 288160459}
   - {fileID: 1390566316}
+  - {fileID: 898615364}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -12102,6 +12332,7 @@ MonoBehaviour:
   canPlace: {fileID: 1728534783}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1538933480
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12352,6 +12583,7 @@ MonoBehaviour:
   canPlace: {fileID: 932576355}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1560320316
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12601,6 +12833,7 @@ MonoBehaviour:
   canPlace: {fileID: 1264854060}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1575528853
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12672,6 +12905,7 @@ MonoBehaviour:
   canPlace: {fileID: 1380020766}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1603290838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12846,6 +13080,7 @@ MonoBehaviour:
   canPlace: {fileID: 1087243745}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1637472019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13791,6 +14026,7 @@ MonoBehaviour:
   canPlace: {fileID: 1208699879}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1741380634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14161,6 +14397,7 @@ MonoBehaviour:
   canPlace: {fileID: 1132153590}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1794198547
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14710,6 +14947,7 @@ MonoBehaviour:
   canPlace: {fileID: 422432838}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1861748661
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15152,6 +15390,7 @@ MonoBehaviour:
   canPlace: {fileID: 1974945075}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1941560903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15430,6 +15669,7 @@ MonoBehaviour:
   canPlace: {fileID: 1049883007}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &2003537771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18960,6 +19200,7 @@ MonoBehaviour:
   canPlace: {fileID: 2081458461}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &2102961163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19031,6 +19272,7 @@ MonoBehaviour:
   canPlace: {fileID: 1396305426}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &2107981564
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19329,6 +19571,7 @@ MonoBehaviour:
   canPlace: {fileID: 484313880}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &2128858771
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19479,6 +19722,7 @@ MonoBehaviour:
   canPlace: {fileID: 2012899574}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &2133254008
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19550,6 +19794,7 @@ MonoBehaviour:
   canPlace: {fileID: 410631089}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &2140494131
 BoxCollider:
   m_ObjectHideFlags: 0

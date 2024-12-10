@@ -128,6 +128,12 @@ public class BattleController : MonoBehaviour
     public void QuitBattle(){
         SceneManager.LoadScene(parent_scene);
     }
+    public void QuitRogueLikeTest(){
+        MapCreator.instance.ReDraw();
+    }
+    public void QuitRogueLike(){
+        MapCreator.instance.Leave();
+    }
     public void ActiveMachine(){
         machines[machine_index].SetActive(true);
         if(machine_index < machines.Count-1){

@@ -11,15 +11,20 @@ public class MapRender : MonoBehaviour
     public enum LandType
     {
         highLand,
-        lowLand
+        lowLand,
+        highlandAndLowland
     }
     public LandType type;
+    public bool all;
     private void Start() {
         attackRange.SetActive(false);
         canPlace.SetActive(false);
     }
     private void Update() {
-        if(BattleController.Instance.is_place && type == (BattleController.Instance.is_lowland ? LandType.lowLand : LandType.highLand) && can_place){
+        if(BattleController.Instance.is_place && all  && can_place){
+            canPlace.SetActive(true);
+        }
+        else if(BattleController.Instance.is_place && type == (BattleController.Instance.is_lowland ? LandType.lowLand : LandType.highLand) && can_place){
             canPlace.SetActive(true);
         }else{
             canPlace.SetActive(false);

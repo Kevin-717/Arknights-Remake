@@ -106,8 +106,8 @@ public class Enemy : MonoBehaviour{
         }
     }
     private void Move(){
-        enemyMove.UpdatePath(move_line[move_index].path);
-        if(Vector3.Distance(move_line[move_index].path,transform.position) <= 0.3f){
+        enemyMove.UpdatePath(move_line[move_index<0?0:move_index].path);
+        if(Vector3.Distance(move_line[move_index<0?0:move_index].path,transform.position) <= 0.3f){
             move_index++;
             checkPoint();
         }else{
@@ -115,9 +115,9 @@ public class Enemy : MonoBehaviour{
                 float x = transform.position.x;
                 float y = transform.position.y;
                 float z = transform.position.z;
-                float dx = move_line[move_index].path.x;
-                float dy = move_line[move_index].path.y;
-                float dz = move_line[move_index].path.z;
+                float dx = move_line[move_index<0?0:move_index].path.x;
+                float dy = move_line[move_index<0?0:move_index].path.y;
+                float dz = move_line[move_index<0?0:move_index].path.z;
                 float mx = (Mathf.Abs(x-dx)<=0.1f)?0:(x>dx?-1:1);
                 float my = (Mathf.Abs(y-dy)<=0.1f)?0:(y>dy?-1:1);
                 //float mz = (Mathf.Abs(z-dz)<=0.1f)?0:(z>dz?-1:1);

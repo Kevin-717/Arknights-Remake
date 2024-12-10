@@ -521,7 +521,7 @@ MonoBehaviour:
   def: 80
   adef: 10
   haveStart: 0
-  haveNormalAttack: 0
+  haveNormalAttack: 1
   haveSecondLife: 0
   dt: 0
   enemyType: 0

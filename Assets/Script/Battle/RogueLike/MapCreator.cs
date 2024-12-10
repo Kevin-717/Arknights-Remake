@@ -196,4 +196,9 @@ public class MapCreator : MonoBehaviour
         Debug.Log(maps[0].nodes.Count);
         DrawNode(maps[0]);
     }
+    public void Leave(){
+        Destroy(RogueLikeData.Instance.gameObject);
+        Destroy(gameObject);
+        SceneManager.LoadScene("Scenes/Main");
+    }
 }

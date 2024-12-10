@@ -255,6 +255,12 @@ public class Char : MonoBehaviour
             foreach(RaycastHit hitInfo in hitInfos)
             {   
                 Vector3 p;
+                if(hitInfo.collider.gameObject.GetComponent<MapRender>() && hitInfo.collider.gameObject.GetComponent<MapRender>().all){
+                    can_put = true;
+                    p = hitInfo.collider.gameObject.transform.position;
+                    transform.position = p;
+                    return;
+                }
                 if(ct == charType.lowLand && hitInfo.collider.gameObject.tag == "lowland" && hitInfo.collider.gameObject.GetComponent<MapRender>().can_place){
                     can_put = true;
                     p = hitInfo.collider.gameObject.transform.position;
