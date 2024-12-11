@@ -79,6 +79,7 @@ public class Enemy : MonoBehaviour{
         }
         rb = GetComponent<Rigidbody>();
         checkPoint();
+        HpBar.transform.parent.gameObject.SetActive(false);
     }
     public void checkPoint(){
         if(move_index >= move_line.Count){
@@ -196,6 +197,7 @@ public class Enemy : MonoBehaviour{
         }
     }
     public void TakeDamage(float damage,BattleController.damageType dt){
+        HpBar.transform.parent.gameObject.SetActive(true);
         if(state == HpAddAnim) return;
         float value = 0;
         if(dt == BattleController.damageType.Physics){

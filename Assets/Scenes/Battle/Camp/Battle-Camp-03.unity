@@ -293,6 +293,7 @@ MonoBehaviour:
   canPlace: {fileID: 881852454}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &9648122
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1174,6 +1175,7 @@ MonoBehaviour:
   canPlace: {fileID: 251031932}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &68375301
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1245,6 +1247,7 @@ MonoBehaviour:
   canPlace: {fileID: 1737163237}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &68982268
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1596,6 +1599,7 @@ MonoBehaviour:
   canPlace: {fileID: 1049755542}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &101750857
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1822,6 +1826,7 @@ MonoBehaviour:
   canPlace: {fileID: 2087734496}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &109877333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2017,6 +2022,7 @@ MonoBehaviour:
   canPlace: {fileID: 66280561}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &121130129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2238,6 +2244,7 @@ MonoBehaviour:
   canPlace: {fileID: 2010678029}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &134296842
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2499,6 +2506,7 @@ MonoBehaviour:
   canPlace: {fileID: 769720716}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &178591879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2645,6 +2653,7 @@ MonoBehaviour:
   canPlace: {fileID: 1194069197}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &210755858
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2716,6 +2725,7 @@ MonoBehaviour:
   canPlace: {fileID: 1724456521}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &211414440
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3794,6 +3804,7 @@ MonoBehaviour:
   canPlace: {fileID: 1418862342}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &299585898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4054,6 +4065,7 @@ MonoBehaviour:
   canPlace: {fileID: 547378162}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &337288207
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4146,6 +4158,7 @@ MonoBehaviour:
   canPlace: {fileID: 1799905796}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &354286603
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4595,6 +4608,7 @@ MonoBehaviour:
   canPlace: {fileID: 1490100934}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &432865595
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5334,6 +5348,7 @@ MonoBehaviour:
   canPlace: {fileID: 1478614853}
   can_place: 0
   type: 0
+  all: 0
 --- !u!65 &471734225
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6553,6 +6568,7 @@ MonoBehaviour:
   canPlace: {fileID: 1961822627}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &555686592
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6727,6 +6743,7 @@ MonoBehaviour:
   canPlace: {fileID: 468097546}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &556362313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7692,6 +7709,7 @@ MonoBehaviour:
   canPlace: {fileID: 274956156}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &637429392
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8062,6 +8080,7 @@ MonoBehaviour:
   canPlace: {fileID: 2096600359}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &672624430
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9724,6 +9743,7 @@ MonoBehaviour:
   canPlace: {fileID: 797442662}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &817495042
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9795,6 +9815,7 @@ MonoBehaviour:
   canPlace: {fileID: 1390623010}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &818122188
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10109,6 +10130,7 @@ MonoBehaviour:
   canPlace: {fileID: 572912751}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &840382296
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11909,6 +11931,7 @@ MonoBehaviour:
   canPlace: {fileID: 1068042129}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &966746313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11980,6 +12003,7 @@ MonoBehaviour:
   canPlace: {fileID: 1043779115}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &974077598
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12487,6 +12511,7 @@ MonoBehaviour:
   canPlace: {fileID: 1189520536}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1008797633
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12736,6 +12761,7 @@ MonoBehaviour:
   canPlace: {fileID: 896599290}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1027327307
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13593,6 +13619,7 @@ MonoBehaviour:
   canPlace: {fileID: 1066522600}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &1089831918
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14232,6 +14259,7 @@ MonoBehaviour:
   canPlace: {fileID: 1794720126}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1142828090
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14345,6 +14373,7 @@ MonoBehaviour:
   canPlace: {fileID: 1654260214}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1173472154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14519,6 +14548,7 @@ MonoBehaviour:
   canPlace: {fileID: 827898504}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1187529944
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14815,6 +14845,7 @@ MonoBehaviour:
   canPlace: {fileID: 463930128}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1213385735
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15115,6 +15146,7 @@ MonoBehaviour:
   canPlace: {fileID: 433398370}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1265004626
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15393,6 +15425,7 @@ MonoBehaviour:
   canPlace: {fileID: 1265433992}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1265610436
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15953,6 +15986,7 @@ MonoBehaviour:
   canPlace: {fileID: 231527808}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &1306067083
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16024,6 +16058,7 @@ MonoBehaviour:
   canPlace: {fileID: 860945616}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &1322330588
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16435,6 +16470,7 @@ MonoBehaviour:
   canPlace: {fileID: 1629403232}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1344211715
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16666,6 +16702,7 @@ MonoBehaviour:
   canPlace: {fileID: 875001006}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1354281604
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17037,6 +17074,7 @@ MonoBehaviour:
   canPlace: {fileID: 558409409}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1393492615
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17183,6 +17221,7 @@ MonoBehaviour:
   canPlace: {fileID: 218307071}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1412031901
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17719,6 +17758,7 @@ MonoBehaviour:
   canPlace: {fileID: 1412886103}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1438000732
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17790,6 +17830,7 @@ MonoBehaviour:
   canPlace: {fileID: 1839443070}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1438380309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19372,6 +19413,7 @@ MonoBehaviour:
   canPlace: {fileID: 1466315395}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1561922073
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19518,6 +19560,7 @@ MonoBehaviour:
   canPlace: {fileID: 1394190840}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &1573519685
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19842,6 +19885,7 @@ MonoBehaviour:
   canPlace: {fileID: 1866599113}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1601074447
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20222,6 +20266,7 @@ MonoBehaviour:
   canPlace: {fileID: 1921077189}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1615814534
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20471,6 +20516,7 @@ MonoBehaviour:
   canPlace: {fileID: 460436419}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1623688414
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20762,6 +20808,7 @@ MonoBehaviour:
   canPlace: {fileID: 1642145862}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1641940464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21391,6 +21438,7 @@ MonoBehaviour:
   canPlace: {fileID: 68039163}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1676143363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22568,6 +22616,7 @@ MonoBehaviour:
   canPlace: {fileID: 1911740382}
   can_place: 0
   type: 0
+  all: 0
 --- !u!65 &1746314760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23528,6 +23577,7 @@ MonoBehaviour:
   canPlace: {fileID: 1100545182}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1805111600
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23840,6 +23890,7 @@ MonoBehaviour:
   canPlace: {fileID: 811604163}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &1839396389
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24363,6 +24414,7 @@ MonoBehaviour:
   canPlace: {fileID: 922893228}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1851803697
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24509,6 +24561,7 @@ MonoBehaviour:
   canPlace: {fileID: 1591800545}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &1861470271
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24730,6 +24783,7 @@ MonoBehaviour:
   canPlace: {fileID: 1930973689}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &1866803339
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25167,6 +25221,7 @@ MonoBehaviour:
   canPlace: {fileID: 1546015687}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1913417618
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25306,7 +25361,7 @@ MonoBehaviour:
   lifeText: {fileID: 944496131}
   life: 5
   enemyNum: 0
-  parent_scene: Scenes/LevelList5
+  parent_scene: Scenes/LevelEnter/LevelList5
   runImage: {fileID: -333694956, guid: bc0295edcf8f17a4d9ec264b889d59e0, type: 3}
   pauseImage: {fileID: -977435905, guid: 1f603aa2cba37864d83ede2b3c1c8c42, type: 3}
   _1x: {fileID: -709176768, guid: 201b5b6442c1e234c9886a3a31497c95, type: 3}
@@ -25381,6 +25436,7 @@ MonoBehaviour:
   canPlace: {fileID: 1934840129}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1927743741
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25623,6 +25679,7 @@ MonoBehaviour:
   canPlace: {fileID: 1726091926}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1940991870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26465,6 +26522,7 @@ MonoBehaviour:
   canPlace: {fileID: 2059632245}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &2036119080
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26536,6 +26594,7 @@ MonoBehaviour:
   canPlace: {fileID: 1597508121}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &2038266692
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33286,6 +33345,7 @@ MonoBehaviour:
   canPlace: {fileID: 1737451494}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &2053227490
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33610,6 +33670,7 @@ MonoBehaviour:
   canPlace: {fileID: 1008532911}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &2083831014
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33681,6 +33742,7 @@ MonoBehaviour:
   canPlace: {fileID: 532668528}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &2086011780
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33752,6 +33814,7 @@ MonoBehaviour:
   canPlace: {fileID: 1012210061}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &2086205067
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -33973,6 +34036,7 @@ MonoBehaviour:
   canPlace: {fileID: 132330284}
   can_place: 0
   type: 1
+  all: 0
 --- !u!65 &2114738302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34315,6 +34379,7 @@ MonoBehaviour:
   canPlace: {fileID: 1755037335}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &2147124765
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -52,7 +52,7 @@ public class MapCreator : MonoBehaviour
     public GameObject linePrefab;
     public GameObject line2Prefab;
     public GameObject pointPrefab;
-    public Material mat;
+    public Button leaveBtn;
     private void CreateNode(){
         int level=0,r=0,c=0;
         foreach(Node nodeLevel in nodeLevels){
@@ -191,6 +191,8 @@ public class MapCreator : MonoBehaviour
     }
     IEnumerator redraw(){
         yield return null;
+        leaveBtn = GameObject.FindGameObjectWithTag("LeaveBtn").GetComponent<Button>();
+        leaveBtn.onClick.AddListener(Leave);
         Debug.Log(GameObject.FindGameObjectWithTag("RogueLikeFrame"));
         node_frame = GameObject.FindGameObjectWithTag("RogueLikeFrame").transform;
         Debug.Log(maps[0].nodes.Count);

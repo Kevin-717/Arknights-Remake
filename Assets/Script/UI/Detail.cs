@@ -51,6 +51,8 @@ public class Detail : MonoBehaviour
     }
     public void EnterChooser(){
         BattleInfo.instance.scene_ind = level_ind;
+        BattleInfo.instance.scene_name = level_name_str;
+        BattleInfo.instance.scene_num = level_num_str;
         SceneManager.LoadScene("Scenes/CharChooser");
     }
     public void EnterStory(int i){

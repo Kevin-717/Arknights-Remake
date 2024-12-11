@@ -15,6 +15,7 @@ TagManager:
   - RogueData
   - RogueController
   - RogueLikeFrame
+  - LeaveBtn
   layers:
   - Default
   - TransparentFX

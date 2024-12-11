@@ -406,6 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5ec74b42af2fa64c9ef37dee7ef8c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedT: 3
   speed: 1.9
   move_line: []
   move_index: 0
@@ -430,6 +431,9 @@ MonoBehaviour:
   enemyType: 0
   inhole: 0
   addTime: 5
+  tags: []
+  atkSpeedScale: 1
+  moveSpeedScale: 1
 --- !u!114 &3497446944982312614
 MonoBehaviour:
   m_ObjectHideFlags: 0

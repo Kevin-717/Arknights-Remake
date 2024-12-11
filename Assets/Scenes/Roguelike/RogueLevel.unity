@@ -1090,7 +1090,7 @@ MonoBehaviour:
   linePrefab: {fileID: 3394645971206948948, guid: 3807d87df4fcbed4ead9f7d8c98e7dda, type: 3}
   line2Prefab: {fileID: 3394645971206948948, guid: 7ae63c99f66c9ab458f99fec8c23c97b, type: 3}
   pointPrefab: {fileID: 4739876105832710859, guid: 71c48a8d2aab75b438c08d7176077a43, type: 3}
-  mat: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  leaveBtn: {fileID: 1544728310}
 --- !u!114 &821777875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2059,6 +2059,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene_ind: 
+  scene_name: 
+  scene_num: 
   charInds: 
 --- !u!114 &1397744337
 MonoBehaviour:
@@ -2370,7 +2372,7 @@ GameObject:
   - component: {fileID: 1544728310}
   m_Layer: 5
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: LeaveBtn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

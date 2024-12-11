@@ -954,7 +954,7 @@ MonoBehaviour:
   - {fileID: 234899428}
   - {fileID: 2111612751}
   storyBoard: {fileID: 1593121660}
-  parentScene: Scenes/LevelList4
+  parentScene: Scenes/LevelEnter/LevelList4
   level_ind: 
   level_num_str: 
   level_name_str: 
@@ -8488,6 +8488,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scene_ind: 
+  scene_name: 
+  scene_num: 
   charInds: 
 --- !u!1 &1769018689
 GameObject:
