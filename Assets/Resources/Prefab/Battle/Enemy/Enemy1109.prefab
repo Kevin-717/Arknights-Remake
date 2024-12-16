@@ -394,6 +394,22 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - spineEvent: OnAttack
+    unityHandler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 6564748359173470731}
+          m_TargetAssemblyTypeName: NcBow, Assembly-CSharp
+          m_MethodName: Damage
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1069552795699694875
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -505,7 +521,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buffs: []
+  buffIconPrefab: {fileID: 7021318854800952479, guid: 879a360307a19a842b1aaded6f61ceb6, type: 3}
   isEnemy: 1
+  blood: {fileID: 21300000, guid: ec4b15983f1c24a45b9172883bc710d5, type: 3}
+  cold: {fileID: 21300000, guid: 1c9bd2e507f8020418aa5be810de42a8, type: 3}
 --- !u!114 &6564748359173470731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -522,7 +541,7 @@ MonoBehaviour:
   Attack_anim: Attack
   interval: 2.3
   damage: 350
-  otherdamage: 0
+  otherdamage: 1
   dt: 0
 --- !u!1 &6641773145520889851
 GameObject:

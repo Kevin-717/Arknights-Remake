@@ -592,6 +592,7 @@ MonoBehaviour:
   canPlace: {fileID: 2000454928}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &73784515
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1596,6 +1597,7 @@ MonoBehaviour:
   canPlace: {fileID: 332498573}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &217367760
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1911,6 +1913,7 @@ MonoBehaviour:
   canPlace: {fileID: 1897070971}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &239098320
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3413,6 +3416,7 @@ MonoBehaviour:
   canPlace: {fileID: 575598543}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &408542898
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3484,6 +3488,7 @@ MonoBehaviour:
   canPlace: {fileID: 1693864205}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &409537223
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3867,6 +3872,7 @@ MonoBehaviour:
   toastDescription: {fileID: 1004338535}
   is_toasting: 0
   is_rogue_like: 0
+  flag: 0
 --- !u!65 &434024299
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4346,7 +4352,7 @@ Transform:
   m_GameObject: {fileID: 497391881}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.69, y: 0.76, z: -6}
+  m_LocalPosition: {x: 24.4, y: 1.7, z: 2.66}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4363,8 +4369,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0.9744834, b: 0.8660377, a: 1}
-  m_Intensity: 13.8
-  m_Range: 29.2
+  m_Intensity: 4.82
+  m_Range: 29
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -4372,7 +4378,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.892
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -4530,6 +4536,7 @@ MonoBehaviour:
   canPlace: {fileID: 742867029}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &506484237
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4751,6 +4758,7 @@ MonoBehaviour:
   canPlace: {fileID: 711829589}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &516546212
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5643,7 +5651,7 @@ Transform:
   m_GameObject: {fileID: 601290759}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.29, y: 1.35, z: 7.24}
+  m_LocalPosition: {x: 19.29, y: 1.35, z: 6.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11920,6 +11928,7 @@ MonoBehaviour:
   canPlace: {fileID: 1549823997}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &792301088
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12123,6 +12132,7 @@ MonoBehaviour:
   canPlace: {fileID: 1463813212}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &850753493
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12347,6 +12357,7 @@ MonoBehaviour:
   canPlace: {fileID: 1667558756}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &877330283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12621,6 +12632,7 @@ MonoBehaviour:
   canPlace: {fileID: 1439337753}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &892310285
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13098,6 +13110,7 @@ MonoBehaviour:
   canPlace: {fileID: 547882570}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &956813146
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13977,6 +13990,7 @@ MonoBehaviour:
   canPlace: {fileID: 235019213}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1011244891
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14253,6 +14267,7 @@ MonoBehaviour:
   canPlace: {fileID: 1167064969}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1032406763
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14566,6 +14581,7 @@ MonoBehaviour:
   canPlace: {fileID: 517045592}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1135064109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14712,6 +14728,7 @@ MonoBehaviour:
   canPlace: {fileID: 725309272}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1154584855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15170,6 +15187,7 @@ MonoBehaviour:
   canPlace: {fileID: 1226687576}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1192290329
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15262,6 +15280,7 @@ MonoBehaviour:
   canPlace: {fileID: 2020295655}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1201813550
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15912,6 +15931,7 @@ MonoBehaviour:
   canPlace: {fileID: 511978756}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1304941940
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16058,6 +16078,7 @@ MonoBehaviour:
   canPlace: {fileID: 300339663}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1312630315
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16129,6 +16150,7 @@ MonoBehaviour:
   canPlace: {fileID: 2083251498}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1313782744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16596,6 +16618,7 @@ MonoBehaviour:
   canPlace: {fileID: 657930501}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1366985545
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16969,6 +16992,7 @@ MonoBehaviour:
   canPlace: {fileID: 1388556251}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1392872575
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18224,6 +18248,7 @@ MonoBehaviour:
   canPlace: {fileID: 322309190}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1393627377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18512,6 +18537,7 @@ MonoBehaviour:
   canPlace: {fileID: 1030100200}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1423716902
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18604,6 +18630,7 @@ MonoBehaviour:
   canPlace: {fileID: 725446363}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1434671019
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18750,6 +18777,7 @@ MonoBehaviour:
   canPlace: {fileID: 1823158119}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1450223313
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19533,6 +19561,7 @@ MonoBehaviour:
   canPlace: {fileID: 1828931285}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1513148813
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20097,7 +20126,7 @@ Transform:
   m_GameObject: {fileID: 1631130128}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0019534163, y: 0.0035970584, z: -0.005656951, w: 0.9999757}
-  m_LocalPosition: {x: 34.69, y: 3.2, z: -6.000001}
+  m_LocalPosition: {x: 24.4, y: 1.7, z: 2.6600008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20114,8 +20143,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0.6662232, b: 0, a: 1}
-  m_Intensity: 10.26
-  m_Range: 29.2
+  m_Intensity: 4.82
+  m_Range: 29
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -20123,7 +20152,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.892
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -21231,7 +21260,7 @@ Transform:
   m_GameObject: {fileID: 1769344261}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.69, y: 0.76, z: -6}
+  m_LocalPosition: {x: 24.4, y: 1.7, z: 2.6600008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21248,8 +21277,8 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 0.9256065, b: 0.6094339, a: 1}
-  m_Intensity: 6.9
-  m_Range: 29.2
+  m_Intensity: 4.82
+  m_Range: 29
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -21257,7 +21286,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.892
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -21526,6 +21555,7 @@ MonoBehaviour:
   canPlace: {fileID: 1112533361}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1788955985
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21796,6 +21826,7 @@ MonoBehaviour:
   canPlace: {fileID: 1699718462}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1807046337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22250,6 +22281,7 @@ MonoBehaviour:
   canPlace: {fileID: 722882163}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1838676970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23119,6 +23151,7 @@ MonoBehaviour:
   canPlace: {fileID: 1947573871}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &1927523066
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23535,6 +23568,7 @@ MonoBehaviour:
   canPlace: {fileID: 908041623}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &1971553141
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23955,6 +23989,7 @@ MonoBehaviour:
   canPlace: {fileID: 1309161200}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &2005850766
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24738,6 +24773,7 @@ MonoBehaviour:
   canPlace: {fileID: 2014742661}
   can_place: 1
   type: 1
+  all: 0
 --- !u!65 &2122666419
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24909,6 +24945,7 @@ MonoBehaviour:
   canPlace: {fileID: 868863748}
   can_place: 1
   type: 0
+  all: 0
 --- !u!65 &2137989890
 BoxCollider:
   m_ObjectHideFlags: 0

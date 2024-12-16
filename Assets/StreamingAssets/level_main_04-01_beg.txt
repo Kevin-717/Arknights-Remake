@@ -180,3 +180,4 @@
 [Dialog]
 [Blocker(block=true)]
 [Image]
+[Predicate(references="1;2")]
