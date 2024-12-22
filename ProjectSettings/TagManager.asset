@@ -16,6 +16,7 @@ TagManager:
   - RogueController
   - RogueLikeFrame
   - LeaveBtn
+  - StoryJumper
   layers:
   - Default
   - TransparentFX

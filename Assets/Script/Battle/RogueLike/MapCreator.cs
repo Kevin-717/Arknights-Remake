@@ -182,6 +182,7 @@ public class MapCreator : MonoBehaviour
     }
     private void Start() {
         instance = this;
+        Destroy(GameObject.FindGameObjectWithTag("data").gameObject);
         CreateNode();
         DrawNode(maps[0]);
     }

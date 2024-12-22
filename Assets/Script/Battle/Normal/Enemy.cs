@@ -154,6 +154,7 @@ public class Enemy : MonoBehaviour{
         waitTime -= Time.deltaTime;
         if(waitTime < 0){
             state = Move_anim;
+            Debug.Log("Wait finish");
             move_index ++;
         }
     }

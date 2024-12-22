@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  nextWaypointDistance: 0.3
+  nextWaypointDistance: 0.15
   reachedEndOfPath: 0
   nextTargetPosition: {x: 0, y: 0, z: 0}
   seeker: {fileID: 0}

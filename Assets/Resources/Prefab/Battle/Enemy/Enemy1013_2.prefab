@@ -308,7 +308,7 @@ MonoBehaviour:
     materialsInsideMask: []
     materialsOutsideMask: []
   disableRenderingOnOverride: 1
-  _animationName: Start
+  _animationName: Default
   loop: 0
   timeScale: 1
 --- !u!114 &8559939720889230664
@@ -381,7 +381,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  nextWaypointDistance: 0.3
+  nextWaypointDistance: 0.15
   reachedEndOfPath: 0
   nextTargetPosition: {x: 0, y: 0, z: 0}
   seeker: {fileID: 0}
