@@ -254,24 +254,28 @@ public class Char : MonoBehaviour
             if(hitInfos.Length==0){can_put = false;return;}
             foreach(RaycastHit hitInfo in hitInfos)
             {   
-                Vector3 p;
-                if(hitInfo.collider.gameObject.GetComponent<MapRender>() && hitInfo.collider.gameObject.GetComponent<MapRender>().all){
-                    can_put = true;
-                    p = hitInfo.collider.gameObject.transform.position;
-                    transform.position = p;
-                    return;
-                }
-                if(ct == charType.lowLand && hitInfo.collider.gameObject.tag == "lowland" && hitInfo.collider.gameObject.GetComponent<MapRender>().can_place){
-                    can_put = true;
-                    p = hitInfo.collider.gameObject.transform.position;
-                    transform.position = p;
-                    return;
-                }else if(ct == charType.highLand && hitInfo.collider.gameObject.tag == "highland" && hitInfo.collider.gameObject.GetComponent<MapRender>().can_place){
-                    can_put = true;
-                    p = hitInfo.collider.gameObject.transform.position;
-                    transform.position = p;
-                    return;
-                }else{
+                try{
+                    Vector3 p;
+                    if(hitInfo.collider.gameObject.GetComponent<MapRender>() && hitInfo.collider.gameObject.GetComponent<MapRender>().all){
+                        can_put = true;
+                        p = hitInfo.collider.gameObject.transform.position;
+                        transform.position = p;
+                        break;
+                    }
+                    if(ct == charType.lowLand && hitInfo.collider.gameObject.GetComponent<MapRender>().type == MapRender.LandType.lowLand && hitInfo.collider.gameObject.GetComponent<MapRender>().can_place){
+                        can_put = true;
+                        p = hitInfo.collider.gameObject.transform.position;
+                        transform.position = p;
+                        break;
+                    }else if(ct == charType.highLand && hitInfo.collider.gameObject.GetComponent<MapRender>().type == MapRender.LandType.highLand && hitInfo.collider.gameObject.GetComponent<MapRender>().can_place){
+                        can_put = true;
+                        p = hitInfo.collider.gameObject.transform.position;
+                        transform.position = p;
+                        break;
+                    }else{
+                        can_put = false;
+                    }
+                }catch{
                     can_put = false;
                 }
             }

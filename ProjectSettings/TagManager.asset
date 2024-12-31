@@ -8,8 +8,6 @@ TagManager:
   - attackRange
   - Enemy
   - data
-  - lowland
-  - highland
   - char
   - data2
   - RogueData

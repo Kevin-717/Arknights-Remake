@@ -13,7 +13,7 @@ EditorBuildSettings:
     guid: ec387bb49185a0c4ba1fc43bec884e7a
   - enabled: 1
     path: Assets/Story/StroyPlayer.unity
-    guid: f54447ffec8fd2b42a574e7eb8ca2c63
+    guid: 8196e0b6bf99e364da743afb1be5d176
   - enabled: 1
     path: Assets/Scenes/LevelEnter/LevelEnter.unity
     guid: d3100104e29d0fb4e9a92f8044e4ecfe
@@ -21,118 +21,22 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelEnter/LevelList0.unity
     guid: cd0602922dba61748bac1d87b3a13f1e
   - enabled: 1
-    path: Assets/Scenes/LevelEnter/LevelList1.unity
-    guid: 1b61c5599901ef44396b94cbf032f230
-  - enabled: 1
-    path: Assets/Scenes/LevelEnter/LevelList2.unity
-    guid: a8c4ae0ddf0e3b84596a92f5615e66bd
-  - enabled: 1
-    path: Assets/Scenes/LevelEnter/LevelList3.unity
-    guid: 0ebbd6bd7447e234daebd65e42f539f3
-  - enabled: 1
-    path: Assets/Scenes/LevelEnter/LevelList4.unity
-    guid: 6408c84fd55ccc14d94487847c7322ec
-  - enabled: 1
-    path: Assets/Scenes/LevelEnter/LevelList5.unity
-    guid: a43a1680a7bfc6b49afe1ee34d08a225
-  - enabled: 1
-    path: Assets/Scenes/LevelEnter/LevelList6.unity
-    guid: dcc232c5ce0db5943a584639f2d4a009
-  - enabled: 1
-    path: Assets/Scenes/LevelEnter/LevelListAct28.unity
-    guid: 0366f45baf2f7da4fa7e29abd6c63f1e
-  - enabled: 1
     path: Assets/Scenes/CharChooser.unity
     guid: 8ac099c12c643e94b90b2b92a9e7bfa7
   - enabled: 1
     path: Assets/Scenes/CharList.unity
     guid: 2caf70c88633dd046bcb764f3ae571e3
   - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle0-1.unity
+    path: Assets/Scenes/Battle/Main/Level0/0-1/Battle0-1.unity
     guid: b7a25926a89798e4e967543dfc4f53ea
   - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle0-2.unity
-    guid: b6ff3f7869693774db032a109ed3124f
+    path: Assets/Scenes/Battle/Main/Level0/0-2/Battle0-2.unity
+    guid: dc94ad3925d409042a4e36db27a9a9dc
   - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle0-3.unity
-    guid: bd57a47fdbaa9a1488408cd9cca4a14a
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle0-4.unity
-    guid: 779012bfbe03c1648a43ee08ab6f5a92
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle1-1.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle1-2.unity
-    guid: 9c72138d1d046ca43a5ba6b185e27c5d
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle1-12.unity
-    guid: 4ce58d79b79aa8a41b3a10abc6ef0598
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle2-6.unity
-    guid: 81c6ea31d7674fe46a68b415bef36b3c
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle2-7.unity
-    guid: aa6a0f12543acf24791fd7e7cc9ba8d6
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle2-9.unity
-    guid: 4b7d207ef538727479b062a02cef308a
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle3-1.unity
-    guid: bc895fa046ff30844b8e3d76892e1236
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle3-8.unity
-    guid: 526a43f590657a847893a40789682043
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle4-1.unity
-    guid: d1fc95bf3e716604d97db8ba71772f72
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle4-3.unity
-    guid: c9720a3311c73aa4886b3d82086260c4
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle4-4.unity
-    guid: 6366c5e87fa21a14a89ab7a06de8d834
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle4-10.unity
-    guid: 5d035151b58c9c549b57b9ddb55f18cd
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle5-2.unity
-    guid: a02265a30446b4c47bfc845e72b94a5a
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle5-10.unity
-    guid: 8ea289bc2b326874ca17e0c27a7a8349
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle6-7.unity
-    guid: 521ffffc47e08d34db824e33b48e7b0e
-  - enabled: 1
-    path: Assets/Scenes/Battle/Main/Battle6-8.unity
-    guid: 0a84a5724aeca9b40a8b5f58aa5a0917
-  - enabled: 1
-    path: Assets/Scenes/Battle/Side/Act28/Battle-CV-7.unity
-    guid: f8ab8d4dcf576764cb56486785c53976
-  - enabled: 1
-    path: Assets/Scenes/Battle/Camp/Battle-Camp-03.unity
-    guid: ebe88c322631ed7469191e9f1419b1ff
+    path: Assets/Scenes/Battle/Main/Level0/0-3/Battle0-3.unity
+    guid: 5146f47f53a61d24f8c639193df4e5f6
   - enabled: 1
     path: Assets/Scenes/Roguelike/CharChooseUI.unity
     guid: 9b3a7a6c03ef1c0478fb44388a2e6aea
-  - enabled: 1
-    path: Assets/Scenes/Roguelike/RogueLevel.unity
-    guid: e003fe5c2454a8c4ea967643e90c7cd0
-  - enabled: 1
-    path: Assets/Scenes/Battle/Roguelike/level1/1-1.unity
-    guid: c8a1ee1e53e2efa4e8323fb5e949fd8c
-  - enabled: 1
-    path: Assets/Scenes/Battle/Roguelike/level1/1-2.unity
-    guid: 8f1970a35fdc8174183485aad93c9cd2
-  - enabled: 1
-    path: Assets/Scenes/Battle/Roguelike/level1/1-3.unity
-    guid: 445995b0fb16b024694320b6dcad632b
-  - enabled: 1
-    path: Assets/Scenes/Battle/Roguelike/level1/1-4.unity
-    guid: 430b246c6823ce441858d7e4e7ef46d2
-  - enabled: 1
-    path: Assets/Scenes/Battle/Roguelike/level3/3-1.unity
-    guid: 861de37a9615df74c9f805cb53a646f8
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

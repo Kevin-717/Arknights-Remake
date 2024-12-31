@@ -72,7 +72,6 @@ public class Enemy : MonoBehaviour{
         // aIDestinationSetter.target.position = move_line[move_index].path;
         enemyMove.seeker = GetComponent<Seeker>();
         Debug.Log(enemyMove.seeker);
-        enemyMove.UpdatePath(move_line[move_index].path);
         totalHp = hp;
         if(!haveStart){
             state = Move_anim;
@@ -105,9 +104,9 @@ public class Enemy : MonoBehaviour{
             move_index++;
             return;
         }
+        enemyMove.UpdatePath(move_line[move_index<0?0:move_index].path);
     }
     private void Move(){
-        enemyMove.UpdatePath(move_line[move_index<0?0:move_index].path);
         if(Vector3.Distance(move_line[move_index<0?0:move_index].path,transform.position) <= 0.3f){
             move_index++;
             checkPoint();
