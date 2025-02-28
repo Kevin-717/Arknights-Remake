@@ -1,14 +1,27 @@
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine.UI;
+
 public class BattleInfo : MonoBehaviour 
 {
-    public string scene_ind;
-    public string scene_name;
-    public string scene_num;
-    public List<int> charInds = new List<int>();
+    public List<int> charIds;
+    public LevelDescText ldt;
     public static BattleInfo instance;
-    private void Start() {
+    public string scene_string;
+    public List<CharInfo> cis;
+    private void Awake() {
+        if(GameObject.FindGameObjectsWithTag("battleInfo").Length > 1){
+            Destroy(gameObject);
+        }else{
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+    private void Start(){
         instance = this;
+    }
+
+    private void Update(){
+        
     }
 }

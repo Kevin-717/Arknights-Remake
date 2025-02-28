@@ -1,6 +1,10 @@
 # Arknights-unity
 基于unity制作的明日方舟电脑版
 
+演示
+
+![Sample Video](https://github.com/user-attachments/assets/ec3e0922-8e89-4bfe-a18d-9914a9096708)
+
 ### 包含
 
 战斗系统

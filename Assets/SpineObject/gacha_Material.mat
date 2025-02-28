@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: gacha_Material
-  m_Shader: {fileID: 4800000, guid: 9f573d3a4d4b5544a89240469ed51837, type: 3}
+  m_Shader: {fileID: 4800000, guid: 1e8a610c9e01c3648bac42585e5fc676, type: 3}
   m_Parent: {fileID: 2100000, guid: c631a2cd2cf211a44b7764741d21e249, type: 2}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []

@@ -142,10 +142,11 @@ GameObject:
   - component: {fileID: 227020943611730713}
   - component: {fileID: 4088808064491981159}
   - component: {fileID: 6453441303028873047}
-  - component: {fileID: 1711541427043379570}
   - component: {fileID: 4121685008941270739}
   - component: {fileID: 198729364384296158}
-  - component: {fileID: 5221292601422221016}
+  - component: {fileID: 2485513293616773365}
+  - component: {fileID: 2911717359294690811}
+  - component: {fileID: 4574191343814985006}
   m_Layer: 0
   m_Name: Char502
   m_TagString: char
@@ -167,7 +168,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 837140909811279049}
-  - {fileID: 6930427728919561687}
   - {fileID: 2323829473532815420}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -30, y: 0, z: 0}
@@ -260,55 +260,6 @@ MonoBehaviour:
   _animationName: 
   loop: 1
   timeScale: 1
---- !u!114 &1711541427043379570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3136114948656059760}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9dc0b810993091946b0979923fe0b3df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Start_anim: Start
-  Idle_anim: Idle
-  Attack_anim: Attack
-  Die_anim: Die
-  hp: 1030
-  HpAnim: {fileID: 4818378871598084007}
-  HpBar: {fileID: 7358254540810156269}
-  totalHp: 0
-  state: 
-  damage: 232
-  can_put: 0
-  ct: 0
-  getDFrame: {fileID: 3302530239779535053}
-  getD: {fileID: 6345343195655107244}
-  showD: {fileID: 8123170924825481276}
-  attackRange: {fileID: 7392687474164335718}
-  dCircle: {fileID: 5405290982211384531}
-  targetCollider: {fileID: 8609496434718975592}
-  createBtn: {fileID: 0}
-  def: 192
-  adef: 0
-  dt: 0
-  dd: 0
-  is_range: 0
-  enemyList: []
-  skillImage: {fileID: 0}
-  have_skill: 0
-  skillBar: {fileID: 0}
-  skt: 0
-  skillRepeat: 0
-  skillCount: 0
-  st: 0
-  totalSP: 0
-  sp: 0
-  skillList: []
-  sstartColor: {r: 0, g: 0, b: 0, a: 0}
-  sendColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!54 &4121685008941270739
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -353,7 +304,7 @@ MonoBehaviour:
     unityHandler:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1711541427043379570}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: Char, Assembly-CSharp
           m_MethodName: Damage
           m_Mode: 1
@@ -365,7 +316,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
---- !u!114 &5221292601422221016
+--- !u!114 &2485513293616773365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -374,14 +325,100 @@ MonoBehaviour:
   m_GameObject: {fileID: 3136114948656059760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bf57a28070d5b547835c65c924a76d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 3239672fb2f57b7498a3cc18fcb3f908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buffs: []
-  buffIconPrefab: {fileID: 0}
-  isEnemy: 0
-  blood: {fileID: 0}
-  cold: {fileID: 0}
+  charAnimations:
+  - state: 4
+    anim: Default
+    isLoop: 0
+  - state: 0
+    anim: Idle
+    isLoop: 1
+  - state: 1
+    anim: Attack
+    isLoop: 0
+  - state: 2
+    anim: Idle
+    isLoop: 1
+  - state: 5
+    anim: Start
+    isLoop: 0
+  - state: 3
+    anim: Die
+    isLoop: 0
+  hp: 721
+  def: 134
+  mdef: 0
+  damage:
+    dt: 0
+    damage: 150
+  damageInterval: 1.05
+  state: 4
+  landType: 0
+  darrow: {fileID: 8123170924825481276}
+  dframe: {fileID: 5405290982211384531}
+  getDFrame: {fileID: 3302530239779535053}
+  getDCursor: {fileID: 6345343195655107244}
+  attackRange: {fileID: 7392687474164335718}
+  beAttackedTargets: []
+  attackTarget: []
+  atk_num: 1
+  hp_bar: {fileID: 4103966277294114267}
+  hp_white: {fileID: 1712815887010781216}
+  obs_num: 2
+  now_def: 0
+  can_def: 0
+--- !u!114 &2911717359294690811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136114948656059760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90293750f472d3340b452cec6fea2606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  events:
+  - spineEvent: OnAttack
+    unityHandler:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2485513293616773365}
+          m_TargetAssemblyTypeName: Char, Assembly-CSharp
+          m_MethodName: AttackEnemy
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!135 &4574191343814985006
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3136114948656059760}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3302530239779535053
 GameObject:
   m_ObjectHideFlags: 0
@@ -399,7 +436,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &189125165461938132
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1090,7 +1127,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 0
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: -152634871
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!114 &6642907779302995918
 MonoBehaviour:
@@ -1132,56 +1169,3 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!1 &8609496434718975592
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6930427728919561687}
-  - component: {fileID: 4903096152132021495}
-  m_Layer: 8
-  m_Name: TargetCollider
-  m_TagString: attackTarget
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6930427728919561687
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8609496434718975592}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8197857958325549010}
-  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
---- !u!65 &4903096152132021495
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8609496434718975592}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 5}
-  m_Center: {x: 0, y: 0, z: 0}

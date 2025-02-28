@@ -111,6 +111,7 @@ public class StoryLoader : MonoBehaviour
     private void PlayNext(){
         // play story
         if(play_index >= storyData.Count){
+            if(debug) return;
             StoryJumper.Instance.JumpToParent();
             return;
         }

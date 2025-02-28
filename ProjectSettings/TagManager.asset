@@ -7,14 +7,9 @@ TagManager:
   - attackTarget
   - attackRange
   - Enemy
-  - data
   - char
-  - data2
-  - RogueData
-  - RogueController
-  - RogueLikeFrame
-  - LeaveBtn
-  - StoryJumper
+  - mapRender
+  - battleInfo
   layers:
   - Default
   - TransparentFX
