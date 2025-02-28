@@ -3,7 +3,7 @@
 
 演示
 
-![Sample Video](https://github.com/user-attachments/assets/ec3e0922-8e89-4bfe-a18d-9914a9096708)
+<video src="https://github.com/user-attachments/assets/ec3e0922-8e89-4bfe-a18d-9914a9096708" controls="controls" width="500" height="300"></video>
 
 ### 包含
 
@@ -59,4 +59,7 @@
 
 优化重制核心逻辑
 减少了大量关卡，稳定后添加
-可以在网页上玩
+
+### 2025.2.28
+
+重写代码
