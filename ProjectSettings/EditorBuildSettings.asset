@@ -15,10 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Battle/Main/Level0/0-1/Battle0-1.unity
     guid: b7a25926a89798e4e967543dfc4f53ea
   - enabled: 1
+    path: Assets/Scenes/Battle/Main/Level2/2-10/Battle2-10.unity
+    guid: 3820002099783e24d8abe9f19e74d131
+  - enabled: 1
     path: Assets/Scenes/UI/CharChooser.unity
     guid: 131e18fb7bd852440833584eb21b96cc
   - enabled: 1
     path: Assets/Scenes/UI/CharList.unity
     guid: 1ef3f551be437c74b964da7615581b48
   m_configObjects: {}
-  m_UseUCBPForAssetBundles: 0

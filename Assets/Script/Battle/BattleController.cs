@@ -25,8 +25,17 @@ public class BattleController : MonoBehaviour
     public Text life_text;
     [HideInInspector]
     public LandType placingType;
+    public int cost = 0;
+    public float costSpeed = 1;
+    private float costCountdown;
+    public Transform costProgress;
+    public Text costText;
+    [HideInInspector]
+    public int killNum = 0;
+    public int life = 3;
     private void Start() {
         instance = this;
+        costCountdown = costSpeed;
     }
     private void Update() {
         if(is_placing || is_showing_range){
@@ -34,7 +43,8 @@ public class BattleController : MonoBehaviour
         }else{
             Time.timeScale = ts;
         }
-
+        Cost();
+        UITop();
     }
     public void Pause(){
         if(pause_flag){
@@ -55,5 +65,22 @@ public class BattleController : MonoBehaviour
             ts++;
         }
         time_btn.sprite = time_scales[(int)(ts-1)];
+    }
+    private void Cost()
+    {
+        costCountdown -= Time.deltaTime;
+        if (costCountdown <= 0)
+        {
+            costCountdown = costSpeed;
+            cost += 1;
+        }
+        costProgress.localScale = new Vector3((costSpeed-costCountdown)/costSpeed, 1, 1);
+        costText.text = cost.ToString();
+    }
+    private void UITop()
+    {
+        enemy_num.text = killNum.ToString()+" / "+EnemyController.Instance.enemyNum.ToString();
+        life_text.text = life.ToString();
+
     }
 }

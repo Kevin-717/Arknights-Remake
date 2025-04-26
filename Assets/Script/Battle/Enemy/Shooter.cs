@@ -10,6 +10,7 @@ public class Shooter : MonoBehaviour
     private float AttackInterval;
     private Char attackTarget;
     private EnemyState lastState;
+    [Range(0.0f,1.0f)]public float scale = 1;
     [Header("攻击范围半径")]
     [Header("!!! 在Enemy中设置Shoot -> 射击动画")]
     [Range(0.1f,20.0f)]public float attackRange = 2.0f;
@@ -38,7 +39,13 @@ public class Shooter : MonoBehaviour
     }
     public void ShootChar(){
         if(enemyController.state != EnemyState.Shoot) return;
-        attackTarget.TakeDamage(enemyController.damage);
+        float dmg = enemyController.damage.damage;
+        Damage damage = new Damage()
+        {
+            damage = dmg * scale,
+            dt = Damage.DamageType.Physics
+        };
+        attackTarget.TakeDamage(damage);
     }
     private EnemyState CopyState()
     {

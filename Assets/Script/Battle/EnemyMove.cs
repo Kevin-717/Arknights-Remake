@@ -78,7 +78,7 @@ public class EnemyMove : MonoBehaviour
                 
             }
             MaterialPropertyBlock propertyBlock = new MaterialPropertyBlock();
-            propertyBlock.SetFloat("_angle",path.vectorPath[currentWaypoint].x < transform.position.x ? -30f : 60f);
+            propertyBlock.SetFloat("_angle",path.vectorPath[currentWaypoint].x <= transform.position.x ? -30f : 60f);
             GetComponent<MeshRenderer>().SetPropertyBlock(propertyBlock);
         }
         else

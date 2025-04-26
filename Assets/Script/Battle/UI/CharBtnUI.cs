@@ -26,7 +26,7 @@ public class CharBtnUI : MonoBehaviour
         
     }
     public void OnClick(){
-        if(true){
+        if(BattleController.instance.cost >= ci.cost) { 
             GameObject c = Instantiate(ci.charPrefab);
             Char ch = c.GetComponent<Char>();
             ch.def = ci.def;

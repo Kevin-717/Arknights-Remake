@@ -195,4 +195,8 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+    private void OnDestroy()
+    {
+        BattleController.instance.killNum++;
+    }
 }
