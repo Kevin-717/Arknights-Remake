@@ -1,10 +1,10 @@
 # Arknights-unity
 基于unity制作的明日方舟电脑版
 
-[!NOTE]
-所有内容均来自prts.wiki和游戏解包，仅供学习使用
-[!NOTE]
-项目重构，暂时从Scenes/ui/LevelList0进入
+>[!NOTE]
+>所有内容均来自prts.wiki和游戏解包，仅供学习使用
+>[!NOTE]
+>项目重构，暂时从Scenes/ui/LevelList0进入
 
 演示
 
