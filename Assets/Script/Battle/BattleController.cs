@@ -2,9 +2,12 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using DG.Tweening;
 public class BattleController : MonoBehaviour 
 {
     public static BattleController instance;
+    public string parentScene;
     [Header("资源Sprite")]
     public Sprite pause;
     public Sprite running;
@@ -33,9 +36,15 @@ public class BattleController : MonoBehaviour
     [HideInInspector]
     public int killNum = 0;
     public int life = 3;
+    public GameObject finFrame;
+    public RectTransform finText;
+    public CanvasGroup black;
+    public bool isRunning = true;
     private void Start() {
         instance = this;
         costCountdown = costSpeed;
+        black.gameObject.SetActive(false);
+        black.GetComponent<Image>().DOFade(0,0);
     }
     private void Update() {
         if(is_placing || is_showing_range){
@@ -45,6 +54,14 @@ public class BattleController : MonoBehaviour
         }
         Cost();
         UITop();
+        if(killNum == EnemyController.Instance.enemyNum)
+        {
+            finFrame.SetActive(true);
+            finText.DOLocalMoveX(-245, 1f).OnComplete(() =>
+            {
+                Quit();
+            });
+        }
     }
     public void Pause(){
         if(pause_flag){
@@ -82,5 +99,15 @@ public class BattleController : MonoBehaviour
         enemy_num.text = killNum.ToString()+" / "+EnemyController.Instance.enemyNum.ToString();
         life_text.text = life.ToString();
 
+    }
+    public void Quit()
+    {
+        isRunning = false;
+        ts = 1;
+        black.gameObject.SetActive(true);
+        black.GetComponent<Image>().DOFade(1, 0.8f).OnComplete(() =>
+        {
+            SceneManager.LoadScene(parentScene);
+        });
     }
 }

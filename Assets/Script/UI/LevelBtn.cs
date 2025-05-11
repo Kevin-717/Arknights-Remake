@@ -10,6 +10,7 @@ public class LevelBtn : MonoBehaviour
     }
     public void OnClicked(){
         LevelPage.instance.ShowLevelPage(ldt.level_num,ldt.level_name,ldt.level_c,ldt.level_desc);
+        EnemyPreview.instance.LoadEnemyData(ldt.json_path);
         BattleInfo.instance.scene_string = ldt.scene_name;
     }
     private void Update(){

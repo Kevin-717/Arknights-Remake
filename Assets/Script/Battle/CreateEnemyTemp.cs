@@ -9,6 +9,7 @@ public class CreateEnemyTemp : MonoBehaviour {
         createTime = enemy.interval;
     }
     private void Update() {
+        if (BattleController.instance.isRunning == false) Destroy(gameObject);
         if(enemy.repeat == 1){
             GameObject e = Instantiate(enemy.enemyPrefab);
             e.transform.position = enemy.startPos;

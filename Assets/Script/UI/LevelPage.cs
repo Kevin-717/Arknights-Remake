@@ -21,10 +21,12 @@ public class LevelPage : MonoBehaviour
     private void Start(){
         instance = this;
         frame.DOFade(0,0);
+        frame.gameObject.SetActive(false);
     }
     public void ShowLevelPage(string num,string name,string level,string desc){
         if(!is_show){
             frame.DOFade(1,0.3f);
+            frame.gameObject.SetActive(true);
             is_show = true;
         }
         level_num.text = num;
@@ -35,7 +37,10 @@ public class LevelPage : MonoBehaviour
     private void Update(){
         if(Input.GetMouseButtonDown(1)){
             if(is_show){
-                frame.DOFade(0,0.3f);
+                frame.DOFade(0, 0.3f).OnComplete(() =>
+                {
+                    frame.gameObject.SetActive(false);
+                });
                 is_show = false;
             }
         }   

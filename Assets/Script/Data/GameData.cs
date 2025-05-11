@@ -113,7 +113,7 @@ public enum LandType
 [System.Serializable]
 public class LevelDescText
 {
-        [Header("关卡编号")]
+    [Header("关卡编号")]
     public string level_num;
     [Header("关卡名")]
     public string level_name;
@@ -124,6 +124,8 @@ public class LevelDescText
     public string level_desc;
     [Header("关卡推荐等级")]
     public string level_c;
+    [Header("关卡json文件")]
+    public string json_path;
 }
 [System.Serializable]
 public class CharProfession
@@ -138,4 +140,17 @@ public class Star_Sprite
     public Sprite bloom;
     public Sprite bottom;
     public Sprite bkg;
+}
+[System.Serializable]
+public class EnemyData
+{
+    public string key;
+    public Sprite icon;
+    public string name;
+    public string introduction;
+    public string def;
+    public string atk;
+    public string mdef;
+    public string life;
+    public string group;
 }

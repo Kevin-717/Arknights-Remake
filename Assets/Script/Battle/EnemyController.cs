@@ -188,6 +188,7 @@ public class EnemyController : MonoBehaviour
         return readData;
     }
     private void Update() {
+        if (BattleController.instance.isRunning == false) Destroy(gameObject);
         globalTimer += Time.deltaTime;
         foreach(EnemyGroupData enemyGroupData in enemyDatas){
             if(globalTimer > enemyGroupData.startTime && (!enemyGroupData.created)){

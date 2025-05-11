@@ -14,6 +14,7 @@ public class LevelListUIController : MonoBehaviour
     private bool flag = false;
     private void Start(){
         background2.GetComponent<Image>().DOFade(0,0);
+        OnValueChanged(new Vector2(0,0));
     }
 
     private void Update(){

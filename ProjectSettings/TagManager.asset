@@ -10,6 +10,7 @@ TagManager:
   - char
   - mapRender
   - battleInfo
+  - PrevBtn
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Mask
   - Hide
   - Shadow
-  - 
+  - Mesh
   - 
   - 
   - 
