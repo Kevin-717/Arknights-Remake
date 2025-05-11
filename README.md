@@ -1,6 +1,14 @@
 # Arknights-unity
 基于unity制作的明日方舟电脑版
 
+>[!NOTE]
+>所有内容均来自prts.wiki和游戏解包，仅供学习使用
+
+2025.4.26
+
+>[!NOTE]
+>项目重构，暂时从Scenes/ui/LevelList0进入
+
 演示
 
 <video src="https://github.com/user-attachments/assets/ec3e0922-8e89-4bfe-a18d-9914a9096708" controls="controls" width="500" height="300"></video>
@@ -63,3 +71,7 @@
 ### 2025.2.28
 
 重写代码
+
+### 2025.2.28
+
+添加内容
