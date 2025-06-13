@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - attackTarget
+  - attackRange
+  - Enemy
+  - char
+  - mapRender
+  - battleInfo
+  - PrevBtn
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Building
+  - PersonUI
+  - Person
+  - Machine
+  - Throw
+  - Obstacle
+  - Hole
+  - Mask
+  - Hide
+  - Shadow
+  - Mesh
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: UI
+    uniqueID: 4142332425
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Mask
+    uniqueID: 3676396453
+    locked: 0
+  - name: Line
+    uniqueID: 4029624749
+    locked: 0

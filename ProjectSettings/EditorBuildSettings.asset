@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/UI/Start.unity
+    guid: 06c13a2e676d08e45a65a548bff05b0c
+  - enabled: 1
+    path: Assets/Scenes/UI/LevelList0.unity
+    guid: 72b8ccb10b8736f468916d7e87951157
+  - enabled: 1
+    path: Assets/Story/StroyPlayer.unity
+    guid: 8196e0b6bf99e364da743afb1be5d176
+  - enabled: 1
+    path: Assets/Scenes/Battle/Main/Level0/0-1/Battle0-1.unity
+    guid: b7a25926a89798e4e967543dfc4f53ea
+  - enabled: 1
+    path: Assets/Scenes/Battle/Main/Level4/4-4/Battle4-4.unity
+    guid: a07338943794ad2489709f96205a1dd0
+  - enabled: 1
+    path: Assets/Scenes/Battle/Rune/Rune1/Rune-01-2/Battle-Rune-01-02.unity
+    guid: 2ca9da451ab2dca419b670a3e5e3cd89
+  - enabled: 1
+    path: Assets/Scenes/UI/CharChooser.unity
+    guid: 131e18fb7bd852440833584eb21b96cc
+  - enabled: 1
+    path: Assets/Scenes/UI/CharList.unity
+    guid: 1ef3f551be437c74b964da7615581b48
+  m_configObjects: {}
