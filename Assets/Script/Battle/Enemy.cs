@@ -99,6 +99,10 @@ public class Enemy : MonoBehaviour
             anim = "Default",
         };
     }
+    public void UpdatePath()
+    {
+        enemyMove.UpdatePath(move_line[move_index].path);
+    }
     public void EnemyMoveController(){
         if(Vector3.Distance(transform.position,move_line[move_index].path) < min_checkpoint_disance){
             move_index++;
@@ -111,7 +115,7 @@ public class Enemy : MonoBehaviour
                 case PointType.normal:
                     if (!is_fly)
                     {
-                        enemyMove.UpdatePath(move_line[move_index].path);
+                        UpdatePath();
                     }
                     else
                     {

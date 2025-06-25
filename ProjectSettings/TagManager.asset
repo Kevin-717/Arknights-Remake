@@ -11,6 +11,7 @@ TagManager:
   - mapRender
   - battleInfo
   - PrevBtn
+  - path
   layers:
   - Default
   - TransparentFX
