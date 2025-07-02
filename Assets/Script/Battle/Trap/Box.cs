@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.UI.InputField;
@@ -22,7 +22,7 @@ public class Box : MonoBehaviour
                 placing = false;
                 BattleController.instance.is_showing_range = false;
                 BattleController.instance.is_placing = false;
-                GameObject.FindGameObjectWithTag("path").GetComponent<AstarPath>().Scan();
+                GameObject.FindGameObjectWithTag("path").GetComponent<AstarPath>().Scan() ;
                 foreach(GameObject enemy in GameObject.FindGameObjectsWithTag("Enemy"))
                 {
                     enemy.GetComponent<Enemy>().UpdatePath();
@@ -52,7 +52,7 @@ public class Box : MonoBehaviour
             Vector3 pos = Camera.main.WorldToScreenPoint(transform.position);
             Vector3 m_MousePos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, pos.z);
             Vector3 wp = Camera.main.ScreenToWorldPoint(m_MousePos);
-            transform.position = new Vector3(wp.x, wp.y, -0.01f);
+            transform.position = new Vector3(wp.x, wp.y, -0.08f);
         }
         return canPut;
     }

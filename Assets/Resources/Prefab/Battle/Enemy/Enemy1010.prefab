@@ -172,9 +172,9 @@ GameObject:
   - component: {fileID: 649569416074533124}
   - component: {fileID: 3815852457153530817}
   - component: {fileID: 3345104644786500514}
-  - component: {fileID: 4924850216441461404}
+  - component: {fileID: 4795773939707389404}
   m_Layer: 8
-  m_Name: Enemy1108
+  m_Name: Enemy1010
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,7 +224,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8f91c31f29be7dd42820e0b7f5f42484, type: 2}
+  - {fileID: 2100000, guid: 008ec3f8768d08448af6bd60315b6389, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skeletonDataAsset: {fileID: 11400000, guid: 70f30f59050a70640ab900a7e5c5f867, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 59079ce59c263c94bb24ad03fbf1a02f, type: 2}
   initialSkinName: 
   initialFlipX: 0
   initialFlipY: 0
@@ -385,10 +385,10 @@ MonoBehaviour:
     anim: Move_Loop
     isLoop: 1
   - state: 2
-    anim: Attack
+    anim: Attack_NoPre
     isLoop: 0
   - state: 3
-    anim: Idle
+    anim: Attack_Idle
     isLoop: 1
   - state: 1
     anim: Idle
@@ -400,14 +400,14 @@ MonoBehaviour:
     anim: Default
     isLoop: 1
   state: 0
-  hp: 3500
+  hp: 1650
   def: 100
-  mdef: 20
+  mdef: 0
   damage:
     dt: 0
-    damage: 380
-  damageInterval: 1.5
-  moveSpeed: 1.7
+    damage: 200
+  damageInterval: 2
+  moveSpeed: 1.1
   move_scale: 0.5
   is_fly: 0
   min_checkpoint_disance: 0.3
@@ -517,7 +517,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.8
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4924850216441461404
+--- !u!114 &4795773939707389404
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

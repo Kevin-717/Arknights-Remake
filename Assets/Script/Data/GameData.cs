@@ -1,7 +1,9 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using Spine.Unity;
+using UnityEditor;
 [System.Serializable]
 public class EnemyAnimation
 {
@@ -35,6 +37,12 @@ public enum CharState
     Die,
     Default,
     Start
+}
+public enum BuffType
+{
+    Originium,
+    Freeze,
+    Dizzy,
 }
 [System.Serializable]
 public class Damage
@@ -154,4 +162,10 @@ public class EnemyData
     public string mdef;
     public string life;
     public string group;
+}
+[System.Serializable]
+public class Buff
+{
+    public BuffType type;
+    public float lastTime;
 }

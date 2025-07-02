@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Spine.Unity;
@@ -49,6 +49,9 @@ public class Enemy : MonoBehaviour
     [Header("是否攻击")]
     public bool is_attack = true;
     private Vector3 fly_point;
+    [HideInInspector]
+    public float atkScale = 1;
+    public float idleScale = 1;
     private void Start() {
         hp_total = hp;
         skeletonAnimation = GetComponent<SkeletonAnimation>();
@@ -203,7 +206,11 @@ public class Enemy : MonoBehaviour
     }
     public void AttackChar(){
         if(state != EnemyState.Attack) return;
-        attackTarget.TakeDamage(damage);
+        attackTarget.TakeDamage(new Damage()
+        {
+            dt = damage.dt,
+            damage = damage.damage*atkScale
+        });
     }
     private void OnTriggerStay(Collider other){
         if(other.gameObject.tag == "char" && ObjectIsAvailable(other.gameObject.GetComponent<Char>()) && attackTarget != other.gameObject.GetComponent<Char>() && is_attack){
@@ -228,6 +235,9 @@ public class Enemy : MonoBehaviour
                 break;
             case Damage.DamageType.Magic:
                 hp -= Mathf.Max(0.05f*damage.damage,damage.damage*(1-mdef*0.01f));
+                break;
+            case Damage.DamageType.Real:
+                hp -= damage.damage;
                 break;
         }
         UpdateHpBar();

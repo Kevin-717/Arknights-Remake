@@ -173,6 +173,7 @@ GameObject:
   - component: {fileID: 3815852457153530817}
   - component: {fileID: 3345104644786500514}
   - component: {fileID: 1891835835462538277}
+  - component: {fileID: -6617871195874787409}
   m_Layer: 8
   m_Name: Enemy1500
   m_TagString: Enemy
@@ -422,6 +423,9 @@ MonoBehaviour:
   hp_bar: {fileID: 6769314880660735392}
   hp_white: {fileID: 2517215593634756751}
   hp_frame: {fileID: 1152917570864094193}
+  is_attack: 1
+  atkScale: 0
+  idleScale: 0
 --- !u!114 &4928204435645241061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -548,6 +552,20 @@ MonoBehaviour:
   enemyController: {fileID: 0}
   scale: 0.26
   attackRange: 1.9
+--- !u!114 &-6617871195874787409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4536855544549114805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24e64ff7c8526164db540f4863803e3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buffs: []
+  isEnemy: 1
 --- !u!1 &6641773145520889851
 GameObject:
   m_ObjectHideFlags: 0
