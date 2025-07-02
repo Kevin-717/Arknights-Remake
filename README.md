@@ -9,9 +9,12 @@
 >[!NOTE]
 >项目重构，暂时从Scenes/ui/LevelList0进入
 
+2025.7.2
+继续完善逻辑
+
 演示
 
-<video src="https://github.com/user-attachments/assets/ec3e0922-8e89-4bfe-a18d-9914a9096708" controls="controls" width="500" height="300"></video>
+https://github.com/Kevin-717/Arknights-Remake/releases/download/v2.0.0.1-preview/20250511_140432.mp4
 
 ### 包含
 
